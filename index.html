@@ -7,32 +7,50 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
 
+    :root {
+      --beige: #F5EFE6; /* base tranquila */
+      --salvia: #A3B18A; /* verde paz */
+      --terracota: #D4A373; /* rústico */
+      --marron: #6C5849; /* texto */
+      --crema: #FEFAF3; /* tarjetas */
+    }
+
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
-      background: #FFF8F0; /* fondo más beige */
-      color: #4A3B2A;
+      background: var(--beige);
+      color: var(--marron);
     }
 
    .header {
-      background: linear-gradient(135deg, #D4A373 0%, #FFB8D1 100%); /* beige + rosa */
-      padding: 50px 20px;
+      background: linear-gradient(135deg, var(--salvia) 0%, var(--terracota) 100%);
+      padding: 60px 20px;
       text-align: center;
-      color: white;
+      color: var(--crema);
+      position: relative;
+    }
+   .header::after {
+      content: "🍃 🧵 🍃";
+      position: absolute;
+      bottom: 15px;
+      left: 0;
+      right: 0;
+      font-size: 1.2rem;
+      opacity: 0.4;
     }
 
    .logo {
       font-size: 3rem;
       font-weight: 900;
-      letter-spacing: 3px;
+      letter-spacing: 4px;
       margin: 0;
     }
-   .logo::after { content: " 🧵"; }
 
    .slogan {
       font-size: 1.2rem;
-      margin-top: 10px;
-      opacity: 0.95;
+      margin-top: 12px;
+      font-weight: 300;
+      letter-spacing: 1px;
     }
 
    .section {
@@ -44,90 +62,101 @@
     h2 {
       text-align: center;
       font-size: 2.5rem;
-      color: #D4A373; /* dorado/beige */
+      color: var(--terracota);
       margin-bottom: 40px;
+      font-weight: 700;
     }
-    h2::before, h2::after { content: "✨"; margin: 0 10px; }
+    h2::before, h2::after { content: "🌿"; margin: 0 12px; opacity: 0.7; }
+
+   .info-envios {
+      background: var(--crema);
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 50px;
+      border: 1px solid var(--salvia);
+      color: var(--marron);
+      font-size: 1.1rem;
+    }
 
    .grid-productos {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
+      gap: 35px;
     }
 
    .producto-card {
-      background: white;
+      background: var(--crema);
       border-radius: 20px;
-      padding: 20px;
-      box-shadow: 0 4px 20px rgba(212,163,115,0.2);
-      border: 2px solid #FFB8D1;
+      padding: 25px;
+      box-shadow: 0 5px 25px rgba(108,88,73,0.08);
+      border: 1px solid #E8E0D5;
       text-align: center;
-      transition: 0.3s;
+      transition: 0.4s;
     }
    .producto-card:hover {
-      transform: translateY(-8px);
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(163,177,138,0.2);
+      border-color: var(--salvia);
     }
 
    .producto-card img {
       width: 100%;
-      height: 250px;
+      height: 260px;
       object-fit: cover;
       border-radius: 15px;
-      margin-bottom: 15px;
-      border: 3px solid #F5E6D3;
+      margin-bottom: 18px;
+      border: 2px solid #E8E0D5;
     }
 
    .producto-nombre {
       font-size: 1.3rem;
-      font-weight: bold;
-      color: #4A3B2A;
+      font-weight: 700;
+      color: var(--marron);
       margin: 10px 0;
+      letter-spacing: 0.5px;
     }
-   .producto-nombre::before { content: "🧵 "; }
+   .producto-nombre::before { content: "🧵 "; opacity: 0.6; }
 
    .producto-desc {
       font-size: 0.95rem;
-      color: #7A6A5A;
-      margin: 8px 0 15px 0;
-      min-height: 40px;
+      color: #8A7A6A;
+      margin: 10px 0 18px 0;
+      min-height: 45px;
+      line-height: 1.5;
     }
 
    .producto-precio {
-      font-size: 1.4rem;
-      color: #D4A373;
-      font-weight: bold;
-      margin: 10px 0;
+      font-size: 1.5rem;
+      color: var(--terracota);
+      font-weight: 700;
+      margin: 15px 0;
     }
 
    .btn-comprar {
-      background: linear-gradient(135deg, #D4A373 0%, #FFB8D1 100%);
+      background: var(--salvia);
       color: white;
-      padding: 14px 30px;
+      padding: 14px 32px;
       border-radius: 50px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 700;
       display: inline-block;
       border: none;
       cursor: pointer;
       font-size: 1rem;
       transition: 0.3s;
+      letter-spacing: 0.5px;
     }
-   .btn-comprar:hover { transform: scale(1.05); }
-
-   .info-envios {
-      background: #F5E6D3;
-      border-radius: 15px;
-      padding: 20px;
-      text-align: center;
-      margin-bottom: 40px;
-      border: 1px dashed #D4A373;
+   .btn-comprar:hover { 
+      background: var(--terracota); 
+      transform: scale(1.05);
     }
 
    .btn-wpp {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background: #25D366;
+      background: var(--salvia);
       color: white;
       width: 60px;
       height: 60px;
@@ -135,11 +164,13 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 30px;
+      font-size: 28px;
       text-decoration: none;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 15px rgba(108,88,73,0.2);
       z-index: 999;
+      transition: 0.3s;
     }
+   .btn-wpp:hover { background: var(--terracota); }
 
     @media (max-width: 768px) {
      .logo { font-size: 2.2rem; }
@@ -150,49 +181,49 @@
 <body>
 
 <header class="header">
-  <h1 class="logo">esteticaX Pulseras</h1>
-  <p class="slogan">Hilo encerado hecho a mano con amor 💖</p>
+  <h1 class="logo">esteticaX</h1>
+  <p class="slogan">Pulseras de hilo encerado hechas a mano</p>
 </header>
 
 <section class="section">
   
   <div class="info-envios">
-    <b>Envíos a todo Tres Arroyos</b> | Hechas a mano | 100% Personalizables
+    🌿 Hechas a mano con amor | Envíos en Tres Arroyos | 100% Personalizables 🌿
   </div>
 
-  <h2>COLECCIÓN HILO ENCERADO</h2>
+  <h2>Colección Natural</h2>
 
   <div class="grid-productos">
     
     <div class="producto-card">
-      <img src="img/hilo1.jpg" alt="Pulsera Hilo 1">
+      <img src="img/hilo1.jpg" alt="Pulsera 7 Nudos">
       <h3 class="producto-nombre">PULSERA 7 NUDOS ROJA</h3>
-      <p class="producto-desc">Protección y buena energía. Ajustable</p>
-      <p class="producto-precio">$6.500 ARS</p>
+      <p class="producto-desc">Protección, fuerza y buena energía. Hilo encerado ajustable.</p>
+      <p class="producto-precio">$6.500</p>
       <a href="https://wa.me/542983XXXXXX?text=Hola! Quiero la PULSERA 7 NUDOS ROJA" target="_blank" class="btn-comprar">LA QUIERO</a>
     </div>
 
     <div class="producto-card">
-      <img src="img/hilo2.jpg" alt="Pulsera Hilo 2">
+      <img src="img/hilo2.jpg" alt="Pulsera Ojo Turco">
       <h3 class="producto-nombre">PULSERA OJO TURCO</h3>
-      <p class="producto-desc">Hilo negro + dije ojo turco. Anti malas vibras</p>
-      <p class="producto-precio">$7.500 ARS</p>
+      <p class="producto-desc">Hilo negro + dije. Para alejar las malas vibras y atraer paz.</p>
+      <p class="producto-precio">$7.500</p>
       <a href="https://wa.me/542983XXXXXX?text=Hola! Quiero la PULSERA OJO TURCO" target="_blank" class="btn-comprar">LA QUIERO</a>
     </div>
 
     <div class="producto-card">
-      <img src="img/hilo3.jpg" alt="Pulsera Hilo 3">
+      <img src="img/hilo3.jpg" alt="Pulsera Nombre">
       <h3 class="producto-nombre">PULSERA NOMBRE</h3>
-      <p class="producto-desc">Personalizada con el nombre que quieras</p>
-      <p class="producto-precio">$9.000 ARS</p>
+      <p class="producto-desc">Personalizada. Elige color de hilo y nombre. Única.</p>
+      <p class="producto-precio">$9.000</p>
       <a href="https://wa.me/542983XXXXXX?text=Hola! Quiero una PULSERA NOMBRE" target="_blank" class="btn-comprar">LA QUIERO</a>
     </div>
 
     <div class="producto-card">
-      <img src="img/hilo4.jpg" alt="Pulsera Hilo 4">
+      <img src="img/hilo4.jpg" alt="Set Amistad">
       <h3 class="producto-nombre">SET AMISTAD X3</h3>
-      <p class="producto-desc">3 pulseras combinadas para compartir</p>
-      <p class="producto-precio">$18.000 ARS</p>
+      <p class="producto-desc">3 pulseras en tonos tierra para compartir con tus personas.</p>
+      <p class="producto-precio">$18.000</p>
       <a href="https://wa.me/542983XXXXXX?text=Hola! Quiero el SET AMISTAD X3" target="_blank" class="btn-comprar">LA QUIERO</a>
     </div>
 
