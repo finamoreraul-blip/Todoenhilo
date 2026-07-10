@@ -3,132 +3,127 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>esteticaX | Pulseras de Hilo Encerado</title>
+  <title>Amar Accesorios 15 | Pulseras de Hilo Encerado Artesanales</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap');
 
     :root {
-      --beige: #F5EFE6; /* base tranquila */
-      --salvia: #A3B18A; /* verde paz */
-      --terracota: #D4A373; /* rústico */
-      --marron: #6C5849; /* texto */
-      --crema: #FEFAF3; /* tarjetas */
+      --lino: #F5EFE6;
+      --salvia: #A3B18A;
+      --arcilla: #D4A373;
+      --tierra: #6C5849;
+      --crudo: #FEFAF3;
     }
 
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
-      background: var(--beige);
-      color: var(--marron);
+      background: var(--lino);
+      color: var(--tierra);
     }
 
    .header {
-      background: linear-gradient(135deg, var(--salvia) 0%, var(--terracota) 100%);
-      padding: 60px 20px;
+      background: linear-gradient(135deg, var(--salvia) 0%, var(--arcilla) 100%);
+      padding: 70px 20px;
       text-align: center;
-      color: var(--crema);
-      position: relative;
-    }
-   .header::after {
-      content: "🍃 🧵 🍃";
-      position: absolute;
-      bottom: 15px;
-      left: 0;
-      right: 0;
-      font-size: 1.2rem;
-      opacity: 0.4;
+      color: var(--crudo);
     }
 
    .logo {
-      font-size: 3rem;
+      font-size: 3.4rem;
       font-weight: 900;
       letter-spacing: 4px;
       margin: 0;
     }
+   .logo span {
+      font-size: 1.8rem;
+      font-weight: 300;
+      letter-spacing: 2px;
+      display: block;
+      margin-top: 8px;
+      opacity: 0.9;
+    }
 
    .slogan {
-      font-size: 1.2rem;
-      margin-top: 12px;
+      font-size: 1.15rem;
+      margin-top: 15px;
       font-weight: 300;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
     }
 
    .section {
-      padding: 60px 20px;
+      padding: 70px 20px;
       max-width: 1100px;
       margin: auto;
     }
 
     h2 {
       text-align: center;
-      font-size: 2.5rem;
-      color: var(--terracota);
-      margin-bottom: 40px;
+      font-size: 2.4rem;
+      color: var(--arcilla);
+      margin-bottom: 50px;
       font-weight: 700;
     }
-    h2::before, h2::after { content: "🌿"; margin: 0 12px; opacity: 0.7; }
+    h2::before, h2::after { content: "🌿"; margin: 0 12px; opacity: 0.6; }
 
    .info-envios {
-      background: var(--crema);
-      border-radius: 15px;
-      padding: 20px;
+      background: var(--crudo);
+      border-radius: 18px;
+      padding: 25px;
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 60px;
       border: 1px solid var(--salvia);
-      color: var(--marron);
-      font-size: 1.1rem;
+      font-size: 1.05rem;
     }
 
    .grid-productos {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 35px;
+      gap: 40px;
     }
 
    .producto-card {
-      background: var(--crema);
-      border-radius: 20px;
+      background: var(--crudo);
+      border-radius: 22px;
       padding: 25px;
-      box-shadow: 0 5px 25px rgba(108,88,73,0.08);
+      box-shadow: 0 6px 20px rgba(108,88,73,0.06);
       border: 1px solid #E8E0D5;
       text-align: center;
       transition: 0.4s;
     }
    .producto-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 10px 30px rgba(163,177,138,0.2);
       border-color: var(--salvia);
     }
 
    .producto-card img {
       width: 100%;
-      height: 260px;
+      height: 270px;
       object-fit: cover;
-      border-radius: 15px;
-      margin-bottom: 18px;
-      border: 2px solid #E8E0D5;
+      border-radius: 16px;
+      margin-bottom: 20px;
     }
 
    .producto-nombre {
-      font-size: 1.3rem;
+      font-size: 1.25rem;
       font-weight: 700;
-      color: var(--marron);
+      color: var(--tierra);
       margin: 10px 0;
-      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
-   .producto-nombre::before { content: "🧵 "; opacity: 0.6; }
 
    .producto-desc {
       font-size: 0.95rem;
       color: #8A7A6A;
-      margin: 10px 0 18px 0;
-      min-height: 45px;
-      line-height: 1.5;
+      margin: 12px 0 18px 0;
+      line-height: 1.6;
+      min-height: 50px;
     }
 
    .producto-precio {
-      font-size: 1.5rem;
-      color: var(--terracota);
+      font-size: 1.6rem;
+      color: var(--arcilla);
       font-weight: 700;
       margin: 15px 0;
     }
@@ -136,19 +131,16 @@
    .btn-comprar {
       background: var(--salvia);
       color: white;
-      padding: 14px 32px;
+      padding: 15px 35px;
       border-radius: 50px;
       text-decoration: none;
       font-weight: 700;
       display: inline-block;
-      border: none;
-      cursor: pointer;
-      font-size: 1rem;
       transition: 0.3s;
-      letter-spacing: 0.5px;
+      letter-spacing: 1px;
     }
    .btn-comprar:hover { 
-      background: var(--terracota); 
+      background: var(--arcilla); 
       transform: scale(1.05);
     }
 
@@ -168,63 +160,62 @@
       text-decoration: none;
       box-shadow: 0 4px 15px rgba(108,88,73,0.2);
       z-index: 999;
-      transition: 0.3s;
     }
-   .btn-wpp:hover { background: var(--terracota); }
+   .btn-wpp:hover { background: var(--arcilla); }
 
     @media (max-width: 768px) {
-     .logo { font-size: 2.2rem; }
-      h2 { font-size: 2rem; }
+     .logo { font-size: 2.4rem; }
+      h2 { font-size: 1.9rem; }
     }
   </style>
 </head>
 <body>
 
 <header class="header">
-  <h1 class="logo">esteticaX</h1>
-  <p class="slogan">Pulseras de hilo encerado hechas a mano</p>
+  <h1 class="logo">AMAR ACCESORIOS<span>15</span></h1>
+  <p class="slogan">Pulseras de hilo encerado tejidas a mano</p>
 </header>
 
 <section class="section">
   
   <div class="info-envios">
-    🌿 Hechas a mano con amor | Envíos en Tres Arroyos | 100% Personalizables 🌿
+    Hecho a mano en Argentina 🍃 | Envíos a todo el país | Cada pieza es única
   </div>
 
-  <h2>Colección Natural</h2>
+  <h2>Colección</h2>
 
   <div class="grid-productos">
     
     <div class="producto-card">
       <img src="img/hilo1.jpg" alt="Pulsera 7 Nudos">
-      <h3 class="producto-nombre">PULSERA 7 NUDOS ROJA</h3>
-      <p class="producto-desc">Protección, fuerza y buena energía. Hilo encerado ajustable.</p>
+      <h3 class="producto-nombre">7 Nudos Roja</h3>
+      <p class="producto-desc">Protección y fuerza. Ajustable. Hilo encerado de algodón.</p>
       <p class="producto-precio">$6.500</p>
-      <a href="https://wa.me/542983XXXXXX?text=Hola! Quiero la PULSERA 7 NUDOS ROJA" target="_blank" class="btn-comprar">LA QUIERO</a>
+      <a href="https://wa.me/542983XXXXXX?text=Hola! Quiero la 7 Nudos Roja de Amar Accesorios 15" target="_blank" class="btn-comprar">ENCARGAR</a>
     </div>
 
     <div class="producto-card">
       <img src="img/hilo2.jpg" alt="Pulsera Ojo Turco">
-      <h3 class="producto-nombre">PULSERA OJO TURCO</h3>
-      <p class="producto-desc">Hilo negro + dije. Para alejar las malas vibras y atraer paz.</p>
+      <h3 class="producto-nombre">Ojo Turco</h3>
+      <p class="producto-desc">Para alejar las malas energías. Dije de vidrio + hilo negro.</p>
       <p class="producto-precio">$7.500</p>
-      <a href="https://wa.me/542983XXXXXX?text=Hola! Quiero la PULSERA OJO TURCO" target="_blank" class="btn-comprar">LA QUIERO</a>
+      <a href="https://wa.me/542983XXXXXX?text=Hola! Quiero la Ojo Turco de Amar Accesorios 15" target="_blank" class="btn-comprar">ENCARGAR</a>
     </div>
 
     <div class="producto-card">
       <img src="img/hilo3.jpg" alt="Pulsera Nombre">
-      <h3 class="producto-nombre">PULSERA NOMBRE</h3>
-      <p class="producto-desc">Personalizada. Elige color de hilo y nombre. Única.</p>
+      <h3 class="producto-nombre">Personalizada</h3>
+      <p class="producto-desc">Elige color y nombre. Tejida especialmente para vos.</p>
       <p class="producto-precio">$9.000</p>
-      <a href="https://wa.me/542983XXXXXX?text=Hola! Quiero una PULSERA NOMBRE" target="_blank" class="btn-comprar">LA QUIERO</a>
+      <a href="https://wa.me/542983XXXXXX?text=Hola! Quiero una Personalizada de Amar Accesorios 15" target="_blank" class="btn-comprar">ENCARGAR</a>
     </div>
 
     <div class="producto-card">
       <img src="img/hilo4.jpg" alt="Set Amistad">
-      <h3 class="producto-nombre">SET AMISTAD X3</h3>
-      <p class="producto-desc">3 pulseras en tonos tierra para compartir con tus personas.</p>
+      <h3 class="producto-nombre">Set Conexión x3</h3>
+      <p class="producto-desc">3 pulseras en tonos tierra. Para compartir con tu tribu.</p>
       <p class="producto-precio">$18.000</p>
-      <a href="https://wa.me/542983XXXXXX?text=Hola! Quiero el SET AMISTAD X3" target="_blank" class="btn-comprar">LA QUIERO</a>
+      <a href="https://wa.me/542983XXXXXX?text=Hola! Quiero el Set Conexión x3 de Amar Accesorios 15" target="_blank" class="btn-comprar">ENCARGAR</a>
     </div>
 
   </div>
