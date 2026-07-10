@@ -3,152 +3,205 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amar Accesorios 15 | Pulseras de Hilo Encerado Artesanales</title>
+  <title>Amar Accesorios 15 | Pulseras de Hilo Encerado</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap');
 
     :root {
-      --lino: #F5EFE6;
-      --salvia: #A3B18A;
-      --arcilla: #D4A373;
-      --tierra: #6C5849;
-      --crudo: #FEFAF3;
+      --celeste: #A7D8F0;
+      --celeste-osc: #7FB8D8;
+      --blanco: #FDFEFF;
+      --gris: #8A9BA8;
+      --gris-claro: #E8F1F5;
     }
 
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
-      background: var(--lino);
-      color: var(--tierra);
+      background: var(--blanco);
+      color: var(--gris);
     }
 
    .header {
-      background: linear-gradient(135deg, var(--salvia) 0%, var(--arcilla) 100%);
-      padding: 70px 20px;
+      background: var(--blanco);
+      padding: 0;
       text-align: center;
-      color: var(--crudo);
+      position: relative;
     }
 
-   .logo {
-      font-size: 3.4rem;
+   .logo-banner {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+
+   .nombre-marca {
+      background: linear-gradient(135deg, var(--celeste) 0%, #B8E2F5 100%);
+      padding: 25px 20px;
+      color: white;
+    }
+
+   .nombre-marca h1 {
+      font-size: 3rem;
       font-weight: 900;
-      letter-spacing: 4px;
+      letter-spacing: 5px;
       margin: 0;
     }
-   .logo span {
-      font-size: 1.8rem;
-      font-weight: 300;
+   .nombre-marca span { 
+      font-size: 1.5rem; 
+      font-weight: 300; 
+      display: block; 
       letter-spacing: 2px;
-      display: block;
-      margin-top: 8px;
-      opacity: 0.9;
+      margin-top: 5px;
+    }
+   .slogan {
+      font-size: 1.1rem;
+      font-weight: 300;
+      letter-spacing: 1px;
+      margin-top: 10px;
     }
 
-   .slogan {
-      font-size: 1.15rem;
-      margin-top: 15px;
-      font-weight: 300;
-      letter-spacing: 2px;
+   .carrito-icon {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: white;
+      color: var(--celeste-osc);
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+   .carrito-contador {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background: var(--celeste-osc);
+      color: white;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
     }
 
    .section {
-      padding: 70px 20px;
+      padding: 60px 20px;
       max-width: 1100px;
       margin: auto;
     }
 
     h2 {
       text-align: center;
-      font-size: 2.4rem;
-      color: var(--arcilla);
+      font-size: 2.3rem;
+      color: var(--celeste-osc);
       margin-bottom: 50px;
-      font-weight: 700;
     }
-    h2::before, h2::after { content: "🌿"; margin: 0 12px; opacity: 0.6; }
+    h2::before, h2::after { content: "☁️"; margin: 0 12px; opacity: 0.7; }
 
-   .info-envios {
-      background: var(--crudo);
-      border-radius: 18px;
-      padding: 25px;
-      text-align: center;
-      margin-bottom: 60px;
-      border: 1px solid var(--salvia);
-      font-size: 1.05rem;
-    }
-
-   .grid-productos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
-    }
-
-   .producto-card {
-      background: var(--crudo);
-      border-radius: 22px;
-      padding: 25px;
-      box-shadow: 0 6px 20px rgba(108,88,73,0.06);
-      border: 1px solid #E8E0D5;
-      text-align: center;
-      transition: 0.4s;
-    }
-   .producto-card:hover {
-      transform: translateY(-10px);
-      border-color: var(--salvia);
-    }
-
-   .producto-card img {
-      width: 100%;
-      height: 270px;
-      object-fit: cover;
-      border-radius: 16px;
-      margin-bottom: 20px;
+   .producto {
+      background: var(--gris-claro);
+      border-radius: 25px;
+      padding: 30px;
+      margin-bottom: 50px;
+      box-shadow: 0 5px 25px rgba(127,184,216,0.1);
     }
 
    .producto-nombre {
-      font-size: 1.25rem;
+      font-size: 1.8rem;
       font-weight: 700;
-      color: var(--tierra);
-      margin: 10px 0;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      color: var(--celeste-osc);
+      text-align: center;
+      margin-bottom: 10px;
     }
 
    .producto-desc {
-      font-size: 0.95rem;
-      color: #8A7A6A;
-      margin: 12px 0 18px 0;
-      line-height: 1.6;
-      min-height: 50px;
+      text-align: center;
+      font-size: 1rem;
+      color: #7A8A96;
+      margin-bottom: 15px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
    .producto-precio {
-      font-size: 1.6rem;
-      color: var(--arcilla);
+      text-align: center;
+      font-size: 2rem;
+      color: var(--celeste-osc);
       font-weight: 700;
-      margin: 15px 0;
+      margin-bottom: 25px;
     }
 
-   .btn-comprar {
-      background: var(--salvia);
+   .carrusel {
+      position: relative;
+      max-width: 500px;
+      margin: 0 auto 25px auto;
+      overflow: hidden;
+      border-radius: 20px;
+      border: 3px solid white;
+    }
+
+   .carrusel-imagenes {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+   .carrusel-imagenes img {
+      width: 100%;
+      flex-shrink: 0;
+      height: 350px;
+      object-fit: cover;
+    }
+
+   .carrusel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.9);
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 20px;
+      color: var(--celeste-osc);
+      font-weight: bold;
+    }
+   .prev { left: 10px; }
+   .next { right: 10px; }
+
+   .btn-pedir {
+      background: var(--celeste);
       color: white;
-      padding: 15px 35px;
+      padding: 16px 40px;
       border-radius: 50px;
-      text-decoration: none;
+      border: none;
       font-weight: 700;
-      display: inline-block;
+      font-size: 1.1rem;
+      display: block;
+      margin: 0 auto;
+      cursor: pointer;
       transition: 0.3s;
       letter-spacing: 1px;
     }
-   .btn-comprar:hover { 
-      background: var(--arcilla); 
-      transform: scale(1.05);
-    }
+   .btn-pedir:hover { background: var(--celeste-osc); transform: scale(1.05); }
 
    .btn-wpp {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background: var(--salvia);
+      background: var(--celeste);
       color: white;
       width: 60px;
       height: 60px;
@@ -158,70 +211,177 @@
       justify-content: center;
       font-size: 28px;
       text-decoration: none;
-      box-shadow: 0 4px 15px rgba(108,88,73,0.2);
+      box-shadow: 0 4px 15px rgba(127,184,216,0.3);
       z-index: 999;
     }
-   .btn-wpp:hover { background: var(--arcilla); }
 
-    @media (max-width: 768px) {
-     .logo { font-size: 2.4rem; }
-      h2 { font-size: 1.9rem; }
+   /* CARRITO POPUP */
+   .carrito-popup {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
     }
+   .carrito-contenido {
+      background: white;
+      padding: 30px;
+      border-radius: 25px;
+      max-width: 500px;
+      width: 90%;
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+   .carrito-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 0;
+      border-bottom: 1px solid #eee;
+    }
+   .cerrar-carrito {
+      float: right;
+      font-size: 28px;
+      cursor: pointer;
+      color: var(--gris);
+   }
   </style>
 </head>
 <body>
 
+<div class="carrito-icon" onclick="abrirCarrito()">
+  🛍️ <span class="carrito-contador" id="contador">0</span>
+</div>
+
 <header class="header">
-  <h1 class="logo">AMAR ACCESORIOS<span>15</span></h1>
-  <p class="slogan">Pulseras de hilo encerado tejidas a mano</p>
+  <img src="img/amar.jpg" alt="Amar Accesorios 15" class="logo-banner">
+  <div class="nombre-marca">
+    <h1>AMAR ACCESORIOS<span>15</span></h1>
+    <p class="slogan">Pulseras de hilo encerado tejidas a mano</p>
+  </div>
 </header>
 
 <section class="section">
-  
-  <div class="info-envios">
-    Hecho a mano en Argentina 🍃 | Envíos a todo el país | Cada pieza es única
-  </div>
-
   <h2>Colección</h2>
 
-  <div class="grid-productos">
+  <!-- PRODUCTO 1 -->
+  <div class="producto">
+    <h3 class="producto-nombre">7 NUDOS CELESTE</h3>
+    <p class="producto-desc">Paz y calma. Hilo encerado de algodón ajustable. Hecha a mano.</p>
+    <p class="producto-precio">$6.500</p>
     
-    <div class="producto-card">
-      <img src="img/hilo1.jpg" alt="Pulsera 7 Nudos">
-      <h3 class="producto-nombre">7 Nudos Roja</h3>
-      <p class="producto-desc">Protección y fuerza. Ajustable. Hilo encerado de algodón.</p>
-      <p class="producto-precio">$6.500</p>
-      <a href="https://wa.me/542983XXXXXX?text=Hola! Quiero la 7 Nudos Roja de Amar Accesorios 15" target="_blank" class="btn-comprar">ENCARGAR</a>
+    <div class="carrusel" id="carrusel1">
+      <div class="carrusel-imagenes">
+        <img src="img/hilo1-1.jpg" alt="7 Nudos 1">
+        <img src="img/hilo1-2.jpg" alt="7 Nudos 2">
+        <img src="img/hilo1-3.jpg" alt="7 Nudos 3">
+      </div>
+      <button class="carrusel-btn prev" onclick="moverCarrusel('carrusel1', -1)">‹</button>
+      <button class="carrusel-btn next" onclick="moverCarrusel('carrusel1', 1)">›</button>
     </div>
 
-    <div class="producto-card">
-      <img src="img/hilo2.jpg" alt="Pulsera Ojo Turco">
-      <h3 class="producto-nombre">Ojo Turco</h3>
-      <p class="producto-desc">Para alejar las malas energías. Dije de vidrio + hilo negro.</p>
-      <p class="producto-precio">$7.500</p>
-      <a href="https://wa.me/542983XXXXXX?text=Hola! Quiero la Ojo Turco de Amar Accesorios 15" target="_blank" class="btn-comprar">ENCARGAR</a>
-    </div>
-
-    <div class="producto-card">
-      <img src="img/hilo3.jpg" alt="Pulsera Nombre">
-      <h3 class="producto-nombre">Personalizada</h3>
-      <p class="producto-desc">Elige color y nombre. Tejida especialmente para vos.</p>
-      <p class="producto-precio">$9.000</p>
-      <a href="https://wa.me/542983XXXXXX?text=Hola! Quiero una Personalizada de Amar Accesorios 15" target="_blank" class="btn-comprar">ENCARGAR</a>
-    </div>
-
-    <div class="producto-card">
-      <img src="img/hilo4.jpg" alt="Set Amistad">
-      <h3 class="producto-nombre">Set Conexión x3</h3>
-      <p class="producto-desc">3 pulseras en tonos tierra. Para compartir con tu tribu.</p>
-      <p class="producto-precio">$18.000</p>
-      <a href="https://wa.me/542983XXXXXX?text=Hola! Quiero el Set Conexión x3 de Amar Accesorios 15" target="_blank" class="btn-comprar">ENCARGAR</a>
-    </div>
-
+    <button class="btn-pedir" onclick="agregarAlCarrito('7 Nudos Celeste', 6500)">AGREGAR AL CARRITO</button>
   </div>
+
+  <!-- PRODUCTO 2 -->
+  <div class="producto">
+    <h3 class="producto-nombre">OJO TURCO AZUL</h3>
+    <p class="producto-desc">Protección y buenas vibras. Dije de vidrio + hilo celeste y blanco.</p>
+    <p class="producto-precio">$7.500</p>
+    
+    <div class="carrusel" id="carrusel2">
+      <div class="carrusel-imagenes">
+        <img src="img/hilo2-1.jpg" alt="Ojo Turco 1">
+        <img src="img/hilo2-2.jpg" alt="Ojo Turco 2">
+      </div>
+      <button class="carrusel-btn prev" onclick="moverCarrusel('carrusel2', -1)">‹</button>
+      <button class="carrusel-btn next" onclick="moverCarrusel('carrusel2', 1)">›</button>
+    </div>
+
+    <button class="btn-pedir" onclick="agregarAlCarrito('Ojo Turco Azul', 7500)">AGREGAR AL CARRITO</button>
+  </div>
+
+  <!-- PRODUCTO 3 -->
+  <div class="producto">
+    <h3 class="producto-nombre">PERSONALIZADA</h3>
+    <p class="producto-desc">Elige tu tono de celeste y nombre. Tejida especialmente para vos.</p>
+    <p class="producto-precio">$9.000</p>
+    
+    <div class="carrusel" id="carrusel3">
+      <div class="carrusel-imagenes">
+        <img src="img/hilo3-1.jpg" alt="Personalizada 1">
+        <img src="img/hilo3-2.jpg" alt="Personalizada 2">
+        <img src="img/hilo3-3.jpg" alt="Personalizada 3">
+      </div>
+      <button class="carrusel-btn prev" onclick="moverCarrusel('carrusel3', -1)">‹</button>
+      <button class="carrusel-btn next" onclick="moverCarrusel('carrusel3', 1)">›</button>
+    </div>
+
+    <button class="btn-pedir" onclick="agregarAlCarrito('Personalizada', 9000)">AGREGAR AL CARRITO</button>
+  </div>
+
 </section>
 
+<!-- POPUP CARRITO -->
+<div class="carrito-popup" id="carritoPopup">
+  <div class="carrito-contenido">
+    <span class="cerrar-carrito" onclick="cerrarCarrito()">&times;</span>
+    <h3>Tu Carrito 🛍️</h3>
+    <div id="listaCarrito"></div>
+    <button class="btn-pedir" onclick="enviarWhatsApp()" style="width:100%; margin-top:20px;">PEDIR POR WHATSAPP</button>
+  </div>
+</div>
+
 <a href="https://wa.me/542983XXXXXX" target="_blank" class="btn-wpp">💬</a>
+
+<script>
+  let carrito = [];
+  let posicionesCarrusel = {};
+
+  function moverCarrusel(id, direccion) {
+    if(!posicionesCarrusel[id]) posicionesCarrusel[id] = 0;
+    const carrusel = document.getElementById(id).querySelector('.carrusel-imagenes');
+    const total = carrusel.children.length;
+    posicionesCarrusel[id] += direccion;
+    if(posicionesCarrusel[id] < 0) posicionesCarrusel[id] = total - 1;
+    if(posicionesCarrusel[id] >= total) posicionesCarrusel[id] = 0;
+    carrusel.style.transform = `translateX(-${posicionesCarrusel[id] * 100}%)`;
+  }
+
+  function agregarAlCarrito(nombre, precio) {
+    carrito.push({nombre, precio});
+    document.getElementById('contador').innerText = carrito.length;
+  }
+
+  function abrirCarrito() {
+    document.getElementById('carritoPopup').style.display = 'flex';
+    let html = '';
+    let total = 0;
+    carrito.forEach((item, i) => {
+      html += `<div class="carrito-item"><span>${item.nombre}</span><span>$${item.precio}</span></div>`;
+      total += item.precio;
+    });
+    html += `<h4 style="text-align:right; margin-top:15px;">Total: $${total}</h4>`;
+    document.getElementById('listaCarrito').innerHTML = html || '<p>Tu carrito está vacío</p>';
+  }
+
+  function cerrarCarrito() {
+    document.getElementById('carritoPopup').style.display = 'none';
+  }
+
+  function enviarWhatsApp() {
+    let mensaje = 'Hola! Quiero pedir de Amar Accesorios 15:%0A%0A';
+    let total = 0;
+    carrito.forEach(item => {
+      mensaje += `- ${item.nombre}: $${item.precio}%0A`;
+      total += item.precio;
+    });
+    mensaje += `%0ATotal: $${total}`;
+    window.open(`https://wa.me/542983XXXXXX?text=${mensaje}`, '_blank');
+  }
+</script>
 
 </body>
 </html>
