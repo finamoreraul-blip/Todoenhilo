@@ -22,14 +22,14 @@
       color: var(--gris);
     }
 
-  .header {
+   .header {
       background: linear-gradient(135deg, var(--azul) 0%, var(--azul-osc) 100%);
       padding: 0;
       text-align: center;
       color: white;
       position: relative;
     }
-  .header::after {
+   .header::after {
       content: "☁️ ☁️ ☁️";
       position: absolute;
       bottom: 15px;
@@ -39,18 +39,16 @@
       opacity: 0.3;
     }
 
-  .logo-banner {
+   .logo-banner {
       width: 100%;
       max-height: 420px;
       object-fit: cover;
       display: block;
     }
 
-  .header-content {
-      padding: 40px 20px;
-    }
+   .header-content { padding: 40px 20px; }
 
-  .logo {
+   .logo {
       font-size: 3.8rem;
       font-weight: 900;
       letter-spacing: 6px;
@@ -58,14 +56,14 @@
       text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
     }
 
-  .slogan {
+   .slogan {
       font-size: 1.3rem;
       margin-top: 15px;
       font-weight: 300;
       letter-spacing: 2px;
     }
 
-  .carrito-icon {
+   .carrito-icon {
       position: fixed;
       top: 20px;
       right: 20px;
@@ -83,8 +81,8 @@
       z-index: 1000;
       transition: 0.3s;
     }
-  .carrito-icon:hover { transform: scale(1.1); }
-  .carrito-contador {
+   .carrito-icon:hover { transform: scale(1.1); }
+   .carrito-contador {
       position: absolute;
       top: -5px;
       right: -5px;
@@ -100,11 +98,7 @@
       font-weight: bold;
     }
 
-  .section {
-      padding: 70px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
+   .section { padding: 70px 20px; max-width: 1200px; margin: auto; }
 
     h2 {
       text-align: center;
@@ -115,14 +109,14 @@
     }
     h2::before, h2::after { content: "✨"; margin: 0 15px; }
 
-  .categorias {
+   .categorias {
       display: flex;
       justify-content: center;
       gap: 15px;
       margin-bottom: 50px;
       flex-wrap: wrap;
    }
-  .btn-categoria {
+   .btn-categoria {
       background: var(--azul-claro);
       color: var(--azul-osc);
       padding: 12px 25px;
@@ -133,12 +127,12 @@
       transition: 0.3s;
       font-size: 1rem;
    }
-  .btn-categoria:hover,.btn-categoria.activo {
+   .btn-categoria:hover,.btn-categoria.activo {
       background: var(--azul);
       color: white;
    }
 
-  .info-envios {
+   .info-envios {
       background: var(--azul-claro);
       border-radius: 15px;
       padding: 20px;
@@ -150,13 +144,13 @@
       font-weight: 600;
     }
 
-  .grid-productos {
+   .grid-productos {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 40px;
     }
 
-  .producto-card {
+   .producto-card {
       background: var(--blanco);
       border-radius: 20px;
       padding: 0;
@@ -165,23 +159,25 @@
       text-align: center;
       transition: 0.4s;
       overflow: hidden;
+      display: block;
     }
-  .producto-card:hover {
+   .producto-card:hover {
       transform: translateY(-15px);
       box-shadow: 0 15px 40px rgba(74,144,226,0.25);
       border-color: var(--azul);
     }
+   .producto-card.oculto { display: none; }
 
-  .producto-nombre {
+   .producto-nombre {
       font-size: 1.4rem;
       font-weight: 700;
       color: var(--azul-osc);
       margin: 20px 20px 10px 20px;
       letter-spacing: 1px;
     }
-  .producto-nombre::before { content: "💙 "; }
+   .producto-nombre::before { content: "💙 "; }
 
-  .producto-desc {
+   .producto-desc {
       font-size: 1rem;
       color: var(--gris);
       margin: 0 20px 15px 20px;
@@ -189,34 +185,34 @@
       line-height: 1.6;
     }
 
-  .producto-precio {
+   .producto-precio {
       font-size: 2rem;
       color: var(--azul);
       font-weight: 700;
       margin: 15px 0;
     }
 
-  .carrusel {
+   .carrusel {
       position: relative;
       width: 100%;
       height: 300px;
       overflow: hidden;
     }
 
-  .carrusel-imagenes {
+   .carrusel-imagenes {
       display: flex;
       transition: transform 0.5s ease;
       height: 100%;
     }
 
-  .carrusel-imagenes img {
+   .carrusel-imagenes img {
       width: 100%;
       flex-shrink: 0;
       height: 100%;
       object-fit: cover;
     }
 
-  .carrusel-btn {
+   .carrusel-btn {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
@@ -230,17 +226,17 @@
       color: var(--azul-osc);
       font-weight: bold;
     }
-  .prev { left: 10px; }
-  .next { right: 10px; }
+   .prev { left: 10px; }
+   .next { right: 10px; }
 
-  .btn-group {
+   .btn-group {
       display: flex;
       gap: 12px;
       padding: 20px;
       justify-content: center;
    }
 
-  .btn-carrito {
+   .btn-carrito {
       background: var(--blanco);
       color: var(--azul);
       padding: 14px 24px;
@@ -253,12 +249,9 @@
       letter-spacing: 0.5px;
       flex: 1;
     }
-  .btn-carrito:hover {
-      background: var(--azul-claro);
-      transform: scale(1.05);
-    }
+   .btn-carrito:hover { background: var(--azul-claro); transform: scale(1.05); }
 
-  .btn-comprar {
+   .btn-comprar {
       background: var(--azul);
       color: white;
       padding: 14px 24px;
@@ -272,12 +265,9 @@
       flex: 1;
       box-shadow: 0 4px 15px rgba(74,144,226,0.3);
     }
-  .btn-comprar:hover {
-      background: var(--azul-osc);
-      transform: scale(1.05);
-    }
+   .btn-comprar:hover { background: var(--azul-osc); transform: scale(1.05); }
 
-  .btn-wpp {
+   .btn-wpp {
       position: fixed;
       bottom: 20px;
       right: 20px;
@@ -295,10 +285,9 @@
       z-index: 999;
       transition: 0.3s;
     }
-  .btn-wpp:hover { background: var(--azul-osc); transform: scale(1.1); }
+   .btn-wpp:hover { background: var(--azul-osc); transform: scale(1.1); }
 
-   /* CARRITO POPUP */
-  .carrito-popup {
+   .carrito-popup {
       display: none;
       position: fixed;
       top: 0; left: 0;
@@ -308,7 +297,7 @@
       align-items: center;
       justify-content: center;
     }
-  .carrito-contenido {
+   .carrito-contenido {
       background: white;
       padding: 35px;
       border-radius: 25px;
@@ -316,14 +305,14 @@
       width: 90%;
       border: 3px solid var(--azul);
     }
-  .carrito-item {
+   .carrito-item {
       display: flex;
       justify-content: space-between;
       padding: 15px 0;
       border-bottom: 1px solid #eee;
       font-size: 1.1rem;
     }
-  .cerrar-carrito {
+   .cerrar-carrito {
       float: right;
       font-size: 32px;
       cursor: pointer;
@@ -331,9 +320,9 @@
    }
 
     @media (max-width: 768px) {
-    .logo { font-size: 2.6rem; }
+     .logo { font-size: 2.6rem; }
       h2 { font-size: 2.2rem; }
-    .btn-group { flex-direction: column; }
+     .btn-group { flex-direction: column; }
     }
   </style>
 </head>
@@ -360,26 +349,26 @@
   <h2>Colección</h2>
 
   <div class="categorias">
-    <button class="btn-categoria activo">Todos</button>
-    <button class="btn-categoria">Pulseras</button>
-    <button class="btn-categoria">Collares</button>
-    <button class="btn-categoria">Para Compartir</button>
+    <button class="btn-categoria activo" onclick="filtrar('todos')">Todos</button>
+    <button class="btn-categoria" onclick="filtrar('pulseras')">Pulseras</button>
+    <button class="btn-categoria" onclick="filtrar('collares')">Collares</button>
+    <button class="btn-categoria" onclick="filtrar('compartir')">Para Compartir</button>
   </div>
 
   <div class="grid-productos">
 
-    <!-- PULSERA -->
-    <div class="producto-card">
-      <div class="carrusel" id="carrusel1">
+    <!-- === PULSERAS === -->
+    <div class="producto-card" data-cat="pulseras">
+      <div class="carrusel" id="p1">
         <div class="carrusel-imagenes">
-          <img src="img/pulsera1-1.jpg" alt="7 Nudos 1">
-          <img src="img/pulsera1-2.jpg" alt="7 Nudos 2">
+          <img src="img/pulsera1-1.jpg" alt="7 Nudos">
+          <img src="img/pulsera1-2.jpg" alt="7 Nudos">
         </div>
-        <button class="carrusel-btn prev" onclick="moverCarrusel('carrusel1', -1)">‹</button>
-        <button class="carrusel-btn next" onclick="moverCarrusel('carrusel1', 1)">›</button>
+        <button class="carrusel-btn prev" onclick="moverCarrusel('p1', -1)">‹</button>
+        <button class="carrusel-btn next" onclick="moverCarrusel('p1', 1)">›</button>
       </div>
       <h3 class="producto-nombre">7 NUDOS CELESTE</h3>
-      <p class="producto-desc">Paz y calma. Hilo encerado de algodón ajustable. Hecha a mano.</p>
+      <p class="producto-desc">Paz y calma. Hilo encerado ajustable. Hecha a mano.</p>
       <p class="producto-precio">$6.500</p>
       <div class="btn-group">
         <button class="btn-carrito" onclick="agregarAlCarrito('7 Nudos Celeste', 6500)">AGREGAR AL CARRITO</button>
@@ -387,18 +376,54 @@
       </div>
     </div>
 
-    <!-- COLLAR -->
-    <div class="producto-card">
-      <div class="carrusel" id="carrusel2">
+    <div class="producto-card" data-cat="pulseras">
+      <div class="carrusel" id="p2">
         <div class="carrusel-imagenes">
-          <img src="img/collar1-1.jpg" alt="Collar Ojo 1">
-          <img src="img/collar1-2.jpg" alt="Collar Ojo 2">
+          <img src="img/pulsera2-1.jpg" alt="Ojo Turco">
+          <img src="img/pulsera2-2.jpg" alt="Ojo Turco">
         </div>
-        <button class="carrusel-btn prev" onclick="moverCarrusel('carrusel2', -1)">‹</button>
-        <button class="carrusel-btn next" onclick="moverCarrusel('carrusel2', 1)">›</button>
+        <button class="carrusel-btn prev" onclick="moverCarrusel('p2', -1)">‹</button>
+        <button class="carrusel-btn next" onclick="moverCarrusel('p2', 1)">›</button>
+      </div>
+      <h3 class="producto-nombre">OJO TURCO AZUL</h3>
+      <p class="producto-desc">Protección y buenas vibras. Dije de vidrio + hilo.</p>
+      <p class="producto-precio">$7.500</p>
+      <div class="btn-group">
+        <button class="btn-carrito" onclick="agregarAlCarrito('Ojo Turco Azul', 7500)">AGREGAR AL CARRITO</button>
+        <button class="btn-comprar" onclick="comprarAhora('Ojo Turco Azul', 7500)">COMPRAR AHORA</button>
+      </div>
+    </div>
+
+    <div class="producto-card" data-cat="pulseras">
+      <div class="carrusel" id="p3">
+        <div class="carrusel-imagenes">
+          <img src="img/pulsera3-1.jpg" alt="Nombre">
+          <img src="img/pulsera3-2.jpg" alt="Nombre">
+        </div>
+        <button class="carrusel-btn prev" onclick="moverCarrusel('p3', -1)">‹</button>
+        <button class="carrusel-btn next" onclick="moverCarrusel('p3', 1)">›</button>
+      </div>
+      <h3 class="producto-nombre">NOMBRE PERSONALIZADO</h3>
+      <p class="producto-desc">Elige tu color y nombre. Tejida especialmente para vos.</p>
+      <p class="producto-precio">$9.000</p>
+      <div class="btn-group">
+        <button class="btn-carrito" onclick="agregarAlCarrito('Nombre Personalizado', 9000)">AGREGAR AL CARRITO</button>
+        <button class="btn-comprar" onclick="comprarAhora('Nombre Personalizado', 9000)">COMPRAR AHORA</button>
+      </div>
+    </div>
+
+    <!-- === COLLARES === -->
+    <div class="producto-card" data-cat="collares">
+      <div class="carrusel" id="c1">
+        <div class="carrusel-imagenes">
+          <img src="img/collar1-1.jpg" alt="Collar Ojo">
+          <img src="img/collar1-2.jpg" alt="Collar Ojo">
+        </div>
+        <button class="carrusel-btn prev" onclick="moverCarrusel('c1', -1)">‹</button>
+        <button class="carrusel-btn next" onclick="moverCarrusel('c1', 1)">›</button>
       </div>
       <h3 class="producto-nombre">COLLAR OJO TURCO</h3>
-      <p class="producto-desc">Protección y estilo. Dije de vidrio + hilo encerado azul.</p>
+      <p class="producto-desc">Protección y estilo. Dije de vidrio + hilo encerado 45cm.</p>
       <p class="producto-precio">$12.000</p>
       <div class="btn-group">
         <button class="btn-carrito" onclick="agregarAlCarrito('Collar Ojo Turco', 12000)">AGREGAR AL CARRITO</button>
@@ -406,18 +431,54 @@
       </div>
     </div>
 
-    <!-- PARA COMPARTIR -->
-    <div class="producto-card">
-      <div class="carrusel" id="carrusel3">
+    <div class="producto-card" data-cat="collares">
+      <div class="carrusel" id="c2">
         <div class="carrusel-imagenes">
-          <img src="img/set1-1.jpg" alt="Set Amistad 1">
-          <img src="img/set1-2.jpg" alt="Set Amistad 2">
+          <img src="img/collar2-1.jpg" alt="Collar Nombre">
+          <img src="img/collar2-2.jpg" alt="Collar Nombre">
         </div>
-        <button class="carrusel-btn prev" onclick="moverCarrusel('carrusel3', -1)">‹</button>
-        <button class="carrusel-btn next" onclick="moverCarrusel('carrusel3', 1)">›</button>
+        <button class="carrusel-btn prev" onclick="moverCarrusel('c2', -1)">‹</button>
+        <button class="carrusel-btn next" onclick="moverCarrusel('c2', 1)">›</button>
+      </div>
+      <h3 class="producto-nombre">COLLAR CON NOMBRE</h3>
+      <p class="producto-desc">Personalizado. Elige nombre y color de hilo. 40cm ajustable.</p>
+      <p class="producto-precio">$14.500</p>
+      <div class="btn-group">
+        <button class="btn-carrito" onclick="agregarAlCarrito('Collar con Nombre', 14500)">AGREGAR AL CARRITO</button>
+        <button class="btn-comprar" onclick="comprarAhora('Collar con Nombre', 14500)">COMPRAR AHORA</button>
+      </div>
+    </div>
+
+    <div class="producto-card" data-cat="collares">
+      <div class="carrusel" id="c3">
+        <div class="carrusel-imagenes">
+          <img src="img/collar3-1.jpg" alt="Collar Luna">
+          <img src="img/collar3-2.jpg" alt="Collar Luna">
+        </div>
+        <button class="carrusel-btn prev" onclick="moverCarrusel('c3', -1)">‹</button>
+        <button class="carrusel-btn next" onclick="moverCarrusel('c3', 1)">›</button>
+      </div>
+      <h3 class="producto-nombre">COLLAR LUNA</h3>
+      <p class="producto-desc">Dije luna + estrellas. Para conectar con tu energía.</p>
+      <p class="producto-precio">$11.000</p>
+      <div class="btn-group">
+        <button class="btn-carrito" onclick="agregarAlCarrito('Collar Luna', 11000)">AGREGAR AL CARRITO</button>
+        <button class="btn-comprar" onclick="comprarAhora('Collar Luna', 11000)">COMPRAR AHORA</button>
+      </div>
+    </div>
+
+    <!-- === PARA COMPARTIR === -->
+    <div class="producto-card" data-cat="compartir">
+      <div class="carrusel" id="s1">
+        <div class="carrusel-imagenes">
+          <img src="img/set1-1.jpg" alt="Set x2">
+          <img src="img/set1-2.jpg" alt="Set x2">
+        </div>
+        <button class="carrusel-btn prev" onclick="moverCarrusel('s1', -1)">‹</button>
+        <button class="carrusel-btn next" onclick="moverCarrusel('s1', 1)">›</button>
       </div>
       <h3 class="producto-nombre">SET CONEXIÓN X2</h3>
-      <p class="producto-desc">Pulseras para compartir. 2 piezas en tonos celestes para tu persona.</p>
+      <p class="producto-desc">Pulseras para compartir. 2 piezas en tonos celestes.</p>
       <p class="producto-precio">$14.000</p>
       <div class="btn-group">
         <button class="btn-carrito" onclick="agregarAlCarrito('Set Conexión x2', 14000)">AGREGAR AL CARRITO</button>
@@ -425,22 +486,39 @@
       </div>
     </div>
 
-    <!-- PERSONALIZADA -->
-    <div class="producto-card">
-      <div class="carrusel" id="carrusel4">
+    <div class="producto-card" data-cat="compartir">
+      <div class="carrusel" id="s2">
         <div class="carrusel-imagenes">
-          <img src="img/personalizada1-1.jpg" alt="Personalizada 1">
-          <img src="img/personalizada1-2.jpg" alt="Personalizada 2">
+          <img src="img/set2-1.jpg" alt="Set x3">
+          <img src="img/set2-2.jpg" alt="Set x3">
         </div>
-        <button class="carrusel-btn prev" onclick="moverCarrusel('carrusel4', -1)">‹</button>
-        <button class="carrusel-btn next" onclick="moverCarrusel('carrusel4', 1)">›</button>
+        <button class="carrusel-btn prev" onclick="moverCarrusel('s2', -1)">‹</button>
+        <button class="carrusel-btn next" onclick="moverCarrusel('s2', 1)">›</button>
       </div>
-      <h3 class="producto-nombre">NOMBRE PERSONALIZADO</h3>
-      <p class="producto-desc">Elige tu color y nombre. Tejido especialmente para vos.</p>
-      <p class="producto-precio">$9.000</p>
+      <h3 class="producto-nombre">SET TRIBU X3</h3>
+      <p class="producto-desc">3 pulseras. Para vos y tus 2 mejores amigas.</p>
+      <p class="producto-precio">$20.000</p>
       <div class="btn-group">
-        <button class="btn-carrito" onclick="agregarAlCarrito('Nombre Personalizado', 9000)">AGREGAR AL CARRITO</button>
-        <button class="btn-comprar" onclick="comprarAhora('Nombre Personalizado', 9000)">COMPRAR AHORA</button>
+        <button class="btn-carrito" onclick="agregarAlCarrito('Set Tribu x3', 20000)">AGREGAR AL CARRITO</button>
+        <button class="btn-comprar" onclick="comprarAhora('Set Tribu x3', 20000)">COMPRAR AHORA</button>
+      </div>
+    </div>
+
+    <div class="producto-card" data-cat="compartir">
+      <div class="carrusel" id="s3">
+        <div class="carrusel-imagenes">
+          <img src="img/set3-1.jpg" alt="Set Pareja">
+          <img src="img/set3-2.jpg" alt="Set Pareja">
+        </div>
+        <button class="carrusel-btn prev" onclick="moverCarrusel('s3', -1)">‹</button>
+        <button class="carrusel-btn next" onclick="moverCarrusel('s3', 1)">›</button>
+      </div>
+      <h3 class="producto-nombre">SET AMOR</h3>
+      <p class="producto-desc">Pulsera + collar a juego. Para regalar en pareja.</p>
+      <p class="producto-precio">$22.000</p>
+      <div class="btn-group">
+        <button class="btn-carrito" onclick="agregarAlCarrito('Set Amor', 22000)">AGREGAR AL CARRITO</button>
+        <button class="btn-comprar" onclick="comprarAhora('Set Amor', 22000)">COMPRAR AHORA</button>
       </div>
     </div>
 
@@ -462,6 +540,22 @@
 <script>
   let carrito = [];
   let posicionesCarrusel = {};
+
+  function filtrar(categoria) {
+    const productos = document.querySelectorAll('.producto-card');
+    const botones = document.querySelectorAll('.btn-categoria');
+    
+    botones.forEach(btn => btn.classList.remove('activo'));
+    event.target.classList.add('activo');
+
+    productos.forEach(prod => {
+      if(categoria === 'todos' || prod.dataset.cat === categoria) {
+        prod.classList.remove('oculto');
+      } else {
+        prod.classList.add('oculto');
+      }
+    });
+  }
 
   function moverCarrusel(id, direccion) {
     if(!posicionesCarrusel[id]) posicionesCarrusel[id] = 0;
