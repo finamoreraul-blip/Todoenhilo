@@ -28,10 +28,22 @@
       text-align: center;
       color: white;
       position: relative;
+      width: 100%;
     }
    .header::after { content: "☁️ ☁️ ☁️"; position: absolute; bottom: 15px; left: 0; right: 0; font-size: 1.5rem; opacity: 0.3; }
-   .logo-banner { width: 100%; max-height: 420px; object-fit: cover; display: block; }
-   .header-content { padding: 40px 20px; }
+
+   .logo-banner-container {
+      width: 100%;
+      background: var(--azul-osc);
+   }
+   .logo-banner {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+      display: block;
+   }
+
+   .header-content { padding: 40px 20px; background: linear-gradient(135deg, var(--azul) 0%, var(--azul-osc) 100%); }
    .logo { font-size: 3.8rem; font-weight: 900; letter-spacing: 6px; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
    .slogan { font-size: 1.3rem; margin-top: 15px; font-weight: 300; letter-spacing: 2px; }
 
@@ -85,20 +97,17 @@
    .producto-card:hover { transform: translateY(-15px); box-shadow: 0 15px 40px rgba(74,144,226,0.25); border-color: var(--azul); }
    .producto-card.oculto { display: none; }
 
+   .producto-img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+   }
+
    .producto-nombre { font-size: 1.4rem; font-weight: 700; color: var(--azul-osc); margin: 20px 20px 10px 20px; letter-spacing: 1px; }
    .producto-nombre::before { content: "💙 "; }
-   .producto-desc { font-size: 1rem; color: var(--gris); margin: 0 20px 15px 20px; min-height: 50px; line-height: 1.6; }
-   .producto-precio { font-size: 2rem; color: var(--azul); font-weight: 700; margin: 15px 0; }
-
-   .carrusel { position: relative; width: 100%; height: 300px; overflow: hidden; }
-   .carrusel-imagenes { display: flex; transition: transform 0.5s ease; height: 100%; }
-   .carrusel-imagenes img { width: 100%; flex-shrink: 0; height: 100%; object-fit: cover; }
-   .carrusel-btn {
-      position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.9);
-      border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 20px; color: var(--azul-osc); font-weight: bold;
-    }
-   .prev { left: 10px; }
-   .next { right: 10px; }
+   .producto-desc { font-size: 1rem; color: var(--gris); margin: 0 20px 15px 20px; min-height: 60px; line-height: 1.6; }
+   .producto-precio { font-size: 2.2rem; color: var(--azul); font-weight: 900; margin: 15px 0; }
 
    .btn-group { display: flex; gap: 12px; padding: 20px; justify-content: center; }
    .btn-carrito {
@@ -134,6 +143,7 @@
      .logo { font-size: 2.6rem; }
       h2 { font-size: 2.2rem; }
      .btn-group { flex-direction: column; }
+     .logo-banner { height: 300px; }
     }
   </style>
 </head>
@@ -144,7 +154,9 @@
 </div>
 
 <header class="header">
-  <img src="img/amar.jpg" alt="Amar Accesorios" class="logo-banner">
+  <div class="logo-banner-container">
+    <img src="img/amara.jpg" alt="Amar Accesorios Banner" class="logo-banner">
+  </div>
   <div class="header-content">
     <h1 class="logo">AMAR ACCESORIOS</h1>
     <p class="slogan">Pulseras, collares y accesorios tejidos a mano</p>
@@ -154,7 +166,7 @@
 <section class="section">
 
   <div class="info-envios">
-    💙 Hecho a mano con amor | Envíos a todo el país | Piezas únicas 💙
+    💙 Todas las piezas $8.000 | Hecho a mano con amor | Envíos a todo el país 💙
   </div>
 
   <h2>Colección</h2>
@@ -177,242 +189,204 @@
 
     <!-- === PULSERAS === -->
     <div class="producto-card" data-cat="pulseras">
-      <div class="carrusel" id="p1">
-        <div class="carrusel-imagenes">
-          <img src="img/pulsera1-1.jpg" alt="7 Nudos">
-          <img src="img/pulsera1-2.jpg" alt="7 Nudos">
-        </div>
-        <button class="carrusel-btn prev" onclick="moverCarrusel('p1', -1)">‹</button>
-        <button class="carrusel-btn next" onclick="moverCarrusel('p1', 1)">›</button>
-      </div>
+      <img src="img/pulsera1.jpg" alt="7 Nudos Celeste" class="producto-img">
       <h3 class="producto-nombre">7 NUDOS CELESTE</h3>
-      <p class="producto-desc">Paz y calma. Hilo encerado ajustable. Hecha a mano.</p>
-      <p class="producto-precio">$6.500</p>
+      <p class="producto-desc">Paz y calma. Hilo encerado celeste con 7 nudos. Ajustable. Hecha a mano.</p>
+      <p class="producto-precio">$8.000</p>
       <div class="btn-group">
-        <button class="btn-carrito" onclick="agregarAlCarrito('7 Nudos Celeste', 6500)">AGREGAR AL CARRITO</button>
-        <button class="btn-comprar" onclick="comprarAhora('7 Nudos Celeste', 6500)">COMPRAR AHORA</button>
+        <button class="btn-carrito" onclick="agregarAlCarrito('7 Nudos Celeste', 8000)">AGREGAR AL CARRITO</button>
+        <button class="btn-comprar" onclick="comprarAhora('7 Nudos Celeste', 8000)">COMPRAR AHORA</button>
       </div>
     </div>
 
     <div class="producto-card" data-cat="pulseras">
-      <div class="carrusel" id="p2">
-        <div class="carrusel-imagenes">
-          <img src="img/pulsera2-1.jpg" alt="Ojo Turco">
-          <img src="img/pulsera2-2.jpg" alt="Ojo Turco">
-        </div>
-        <button class="carrusel-btn prev" onclick="moverCarrusel('p2', -1)">‹</button>
-        <button class="carrusel-btn next" onclick="moverCarrusel('p2', 1)">›</button>
-      </div>
+      <img src="img/pulsera2.jpg" alt="Ojo Turco Azul" class="producto-img">
       <h3 class="producto-nombre">OJO TURCO AZUL</h3>
-      <p class="producto-desc">Protección y buenas vibras. Dije de vidrio + hilo.</p>
-      <p class="producto-precio">$7.500</p>
+      <p class="producto-desc">Protección y buenas vibras. Hilo celeste y blanco con dije de ojo turco de vidrio.</p>
+      <p class="producto-precio">$8.000</p>
       <div class="btn-group">
-        <button class="btn-carrito" onclick="agregarAlCarrito('Ojo Turco Azul', 7500)">AGREGAR AL CARRITO</button>
-        <button class="btn-comprar" onclick="comprarAhora('Ojo Turco Azul', 7500)">COMPRAR AHORA</button>
+        <button class="btn-carrito" onclick="agregarAlCarrito('Ojo Turco Azul', 8000)">AGREGAR AL CARRITO</button>
+        <button class="btn-comprar" onclick="comprarAhora('Ojo Turco Azul', 8000)">COMPRAR AHORA</button>
       </div>
     </div>
 
     <div class="producto-card" data-cat="pulseras">
-      <div class="carrusel" id="p3">
-        <div class="carrusel-imagenes">
-          <img src="img/pulsera3-1.jpg" alt="Nombre">
-          <img src="img/pulsera3-2.jpg" alt="Nombre">
-        </div>
-        <button class="carrusel-btn prev" onclick="moverCarrusel('p3', -1)">‹</button>
-        <button class="carrusel-btn next" onclick="moverCarrusel('p3', 1)">›</button>
-      </div>
+      <img src="img/pulsera3.jpg" alt="Nombre Personalizado" class="producto-img">
       <h3 class="producto-nombre">NOMBRE PERSONALIZADO</h3>
-      <p class="producto-desc">Elige tu color y nombre. Tejida especialmente para vos.</p>
-      <p class="producto-precio">$9.000</p>
+      <p class="producto-desc">Elige tu color y nombre. Tejida con letras doradas sobre hilo encerado.</p>
+      <p class="producto-precio">$8.000</p>
       <div class="btn-group">
-        <button class="btn-carrito" onclick="agregarAlCarrito('Nombre Personalizado', 9000)">AGREGAR AL CARRITO</button>
-        <button class="btn-comprar" onclick="comprarAhora('Nombre Personalizado', 9000)">COMPRAR AHORA</button>
+        <button class="btn-carrito" onclick="agregarAlCarrito('Nombre Personalizado', 8000)">AGREGAR AL CARRITO</button>
+        <button class="btn-comprar" onclick="comprarAhora('Nombre Personalizado', 8000)">COMPRAR AHORA</button>
       </div>
     </div>
 
     <!-- === COLLARES === -->
     <div class="producto-card" data-cat="collares">
-      <div class="carrusel" id="c1">
-        <div class="carrusel-imagenes">
-          <img src="img/collar1-1.jpg" alt="Collar Ojo">
-          <img src="img/collar1-2.jpg" alt="Collar Ojo">
-        </div>
-        <button class="carrusel-btn prev" onclick="moverCarrusel('c1', -1)">‹</button>
-        <button class="carrusel-btn next" onclick="moverCarrusel('c1', 1)">›</button>
-      </div>
+      <img src="img/collar1.jpg" alt="Collar Ojo Turco" class="producto-img">
       <h3 class="producto-nombre">COLLAR OJO TURCO</h3>
-      <p class="producto-desc">Protección y estilo. Dije de vidrio + hilo encerado 45cm.</p>
-      <p class="producto-precio">$12.000</p>
+      <p class="producto-desc">Protección y estilo. Cadena fina + dije de ojo turco grande en tonos azules.</p>
+      <p class="producto-precio">$8.000</p>
       <div class="btn-group">
-        <button class="btn-carrito" onclick="agregarAlCarrito('Collar Ojo Turco', 12000)">AGREGAR AL CARRITO</button>
-        <button class="btn-comprar" onclick="comprarAhora('Collar Ojo Turco', 12000)">COMPRAR AHORA</button>
+        <button class="btn-carrito" onclick="agregarAlCarrito('Collar Ojo Turco', 8000)">AGREGAR AL CARRITO</button>
+        <button class="btn-comprar" onclick="comprarAhora('Collar Ojo Turco', 8000)">COMPRAR AHORA</button>
       </div>
     </div>
 
     <div class="producto-card" data-cat="collares">
-      <div class="carrusel" id="c2">
-        <div class="carrusel-imagenes">
-          <img src="img/collar2-1.jpg" alt="Collar Nombre">
-          <img src="img/collar2-2.jpg" alt="Collar Nombre">
-        </div>
-        <button class="carrusel-btn prev" onclick="moverCarrusel('c2', -1)">‹</button>
-        <button class="carrusel-btn next" onclick="moverCarrusel('c2', 1)">›</button>
-      </div>
+      <img src="img/collar2.jpg" alt="Collar Con Nombre" class="producto-img">
       <h3 class="producto-nombre">COLLAR CON NOMBRE</h3>
-      <p class="producto-desc">Personalizado. Elige nombre y color de hilo. 40cm ajustable.</p>
-      <p class="producto-precio">$14.500</p>
+      <p class="producto-desc">Personalizado. Nombre en letras cursivas sobre placa dorada + hilo azul.</p>
+      <p class="producto-precio">$8.000</p>
       <div class="btn-group">
-        <button class="btn-carrito" onclick="agregarAlCarrito('Collar con Nombre', 14500)">AGREGAR AL CARRITO</button>
-        <button class="btn-comprar" onclick="comprarAhora('Collar con Nombre', 14500)">COMPRAR AHORA</button>
+        <button class="btn-carrito" onclick="agregarAlCarrito('Collar con Nombre', 8000)">AGREGAR AL CARRITO</button>
+        <button class="btn-comprar" onclick="comprarAhora('Collar con Nombre', 8000)">COMPRAR AHORA</button>
       </div>
     </div>
 
     <div class="producto-card" data-cat="collares">
-      <div class="carrusel" id="c3">
-        <div class="carrusel-imagenes">
-          <img src="img/collar3-1.jpg" alt="Collar Luna">
-          <img src="img/collar3-2.jpg" alt="Collar Luna">
-        </div>
-        <button class="carrusel-btn prev" onclick="moverCarrusel('c3', -1)">‹</button>
-        <button class="carrusel-btn next" onclick="moverCarrusel('c3', 1)">›</button>
-      </div>
+      <img src="img/collar3.jpg" alt="Collar Luna" class="producto-img">
       <h3 class="producto-nombre">COLLAR LUNA</h3>
-      <p class="producto-desc">Dije luna + estrellas. Para conectar con tu energía.</p>
-      <p class="producto-precio">$11.000</p>
+      <p class="producto-desc">Dije luna creciente + 3 estrellitas. Para conectar con tu energía lunar.</p>
+      <p class="producto-precio">$8.000</p>
       <div class="btn-group">
-        <button class="btn-carrito" onclick="agregarAlCarrito('Collar Luna', 11000)">AGREGAR AL CARRITO</button>
-        <button class="btn-comprar" onclick="comprarAhora('Collar Luna', 11000)">COMPRAR AHORA</button>
+        <button class="btn-carrito" onclick="agregarAlCarrito('Collar Luna', 8000)">AGREGAR AL CARRITO</button>
+        <button class="btn-comprar" onclick="comprarAhora('Collar Luna', 8000)">COMPRAR AHORA</button>
       </div>
     </div>
 
-    <!-- === PARA COMPARTIR - PAREJA === -->
+    <!-- === PARA COMPARTIR - PAREJA === 10 PRODUCTOS -->
     <div class="producto-card" data-cat="compartir" data-sub="pareja">
-      <div class="carrusel" id="sp1">
-        <div class="carrusel-imagenes">
-          <img src="img/compartir0.jpg" alt="Pareja 0">
-          <img src="img/compartir1.jpg" alt="Pareja 1">
-          <img src="img/compartir2.jpg" alt="Pareja 2">
-        </div>
-        <button class="carrusel-btn prev" onclick="moverCarrusel('sp1', -1)">‹</button>
-        <button class="carrusel-btn next" onclick="moverCarrusel('sp1', 1)">›</button>
-      </div>
+      <img src="img/compartir0.jpg" alt="Set Corazones" class="producto-img">
       <h3 class="producto-nombre">SET CORAZONES</h3>
-      <p class="producto-desc">Pulsera + collar a juego. Para vos y tu persona.</p>
-      <p class="producto-precio">$22.000</p>
+      <p class="producto-desc">Pulsera + collar a juego. Corazón partido en 2. Cuando se juntan forman 1 solo.</p>
+      <p class="producto-precio">$8.000</p>
       <div class="btn-group">
-        <button class="btn-carrito" onclick="agregarAlCarrito('Set Corazones', 22000)">AGREGAR AL CARRITO</button>
-        <button class="btn-comprar" onclick="comprarAhora('Set Corazones', 22000)">COMPRAR AHORA</button>
+        <button class="btn-carrito" onclick="agregarAlCarrito('Set Corazones', 8000)">AGREGAR AL CARRITO</button>
+        <button class="btn-comprar" onclick="comprarAhora('Set Corazones', 8000)">COMPRAR AHORA</button>
       </div>
     </div>
 
     <div class="producto-card" data-cat="compartir" data-sub="pareja">
-      <div class="carrusel" id="sp2">
-        <div class="carrusel-imagenes">
-          <img src="img/compartir3.jpg" alt="Pareja 3">
-          <img src="img/compartir4.jpg" alt="Pareja 4">
-        </div>
-        <button class="carrusel-btn prev" onclick="moverCarrusel('sp2', -1)">‹</button>
-        <button class="carrusel-btn next" onclick="moverCarrusel('sp2', 1)">›</button>
-      </div>
+      <img src="img/compartir1.jpg" alt="Set Infinito" class="producto-img">
       <h3 class="producto-nombre">SET INFINITO</h3>
-      <p class="producto-desc">Símbolo infinito en hilo celeste. Conexión eterna.</p>
-      <p class="producto-precio">$18.000</p>
+      <p class="producto-desc">Símbolo infinito tejido en hilo celeste. Conexión eterna entre los dos.</p>
+      <p class="producto-precio">$8.000</p>
       <div class="btn-group">
-        <button class="btn-carrito" onclick="agregarAlCarrito('Set Infinito', 18000)">AGREGAR AL CARRITO</button>
-        <button class="btn-comprar" onclick="comprarAhora('Set Infinito', 18000)">COMPRAR AHORA</button>
+        <button class="btn-carrito" onclick="agregarAlCarrito('Set Infinito', 8000)">AGREGAR AL CARRITO</button>
+        <button class="btn-comprar" onclick="comprarAhora('Set Infinito', 8000)">COMPRAR AHORA</button>
       </div>
     </div>
 
     <div class="producto-card" data-cat="compartir" data-sub="pareja">
-      <div class="carrusel" id="sp3">
-        <div class="carrusel-imagenes">
-          <img src="img/compartir5.jpg" alt="Pareja 5">
-          <img src="img/compartir6.jpg" alt="Pareja 6">
-        </div>
-        <button class="carrusel-btn prev" onclick="moverCarrusel('sp3', -1)">‹</button>
-        <button class="carrusel-btn next" onclick="moverCarrusel('sp3', 1)">›</button>
-      </div>
+      <img src="img/compartir2.jpg" alt="Set Sol y Luna" class="producto-img">
       <h3 class="producto-nombre">SET SOL Y LUNA</h3>
-      <p class="producto-desc">Él es sol, ella es luna. Diseños complementarios.</p>
-      <p class="producto-precio">$20.000</p>
+      <p class="producto-desc">Él usa sol dorado, ella luna plateada. Diseños complementarios para equilibrarse.</p>
+      <p class="producto-precio">$8.000</p>
       <div class="btn-group">
-        <button class="btn-carrito" onclick="agregarAlCarrito('Set Sol y Luna', 20000)">AGREGAR AL CARRITO</button>
-        <button class="btn-comprar" onclick="comprarAhora('Set Sol y Luna', 20000)">COMPRAR AHORA</button>
+        <button class="btn-carrito" onclick="agregarAlCarrito('Set Sol y Luna', 8000)">AGREGAR AL CARRITO</button>
+        <button class="btn-comprar" onclick="comprarAhora('Set Sol y Luna', 8000)">COMPRAR AHORA</button>
       </div>
     </div>
 
     <div class="producto-card" data-cat="compartir" data-sub="pareja">
-      <div class="carrusel" id="sp4">
-        <div class="carrusel-imagenes">
-          <img src="img/compartir7.jpg" alt="Pareja 7">
-          <img src="img/compartir8.jpg" alt="Pareja 8">
-          <img src="img/compartir9.jpg" alt="Pareja 9">
-        </div>
-        <button class="carrusel-btn prev" onclick="moverCarrusel('sp4', -1)">‹</button>
-        <button class="carrusel-btn next" onclick="moverCarrusel('sp4', 1)">›</button>
-      </div>
+      <img src="img/compartir3.jpg" alt="Set Almas Gemelas" class="producto-img">
       <h3 class="producto-nombre">SET ALMAS GEMELAS</h3>
-      <p class="producto-desc">Dos piezas que encajan. Para almas que se encontraron.</p>
-      <p class="producto-precio">$24.000</p>
+      <p class="producto-desc">Dos pulseras con imanes. Se atraen cuando están cerca. Para almas que se encontraron.</p>
+      <p class="producto-precio">$8.000</p>
       <div class="btn-group">
-        <button class="btn-carrito" onclick="agregarAlCarrito('Set Almas Gemelas', 24000)">AGREGAR AL CARRITO</button>
-        <button class="btn-comprar" onclick="comprarAhora('Set Almas Gemelas', 24000)">COMPRAR AHORA</button>
+        <button class="btn-carrito" onclick="agregarAlCarrito('Set Almas Gemelas', 8000)">AGREGAR AL CARRITO</button>
+        <button class="btn-comprar" onclick="comprarAhora('Set Almas Gemelas', 8000)">COMPRAR AHORA</button>
+      </div>
+    </div>
+
+    <div class="producto-card" data-cat="compartir" data-sub="pareja">
+      <img src="img/compartir4.jpg" alt="Set Coordenadas" class="producto-img">
+      <h3 class="producto-nombre">SET COORDENADAS</h3>
+      <p class="producto-desc">Las coordenadas del lugar donde se conocieron grabadas en dije. Recuerdo eterno.</p>
+      <p class="producto-precio">$8.000</p>
+      <div class="btn-group">
+        <button class="btn-carrito" onclick="agregarAlCarrito('Set Coordenadas', 8000)">AGREGAR AL CARRITO</button>
+        <button class="btn-comprar" onclick="comprarAhora('Set Coordenadas', 8000)">COMPRAR AHORA</button>
+      </div>
+    </div>
+
+    <div class="producto-card" data-cat="compartir" data-sub="pareja">
+      <img src="img/compartir5.jpg" alt="Set Flechas" class="producto-img">
+      <h3 class="producto-nombre">SET FLECHAS</h3>
+      <p class="producto-desc">Flecha de cupido. Una apunta hacia vos, la otra hacia tu persona.</p>
+      <p class="producto-precio">$8.000</p>
+      <div class="btn-group">
+        <button class="btn-carrito" onclick="agregarAlCarrito('Set Flechas', 8000)">AGREGAR AL CARRITO</button>
+        <button class="btn-comprar" onclick="comprarAhora('Set Flechas', 8000)">COMPRAR AHORA</button>
+      </div>
+    </div>
+
+    <div class="producto-card" data-cat="compartir" data-sub="pareja">
+      <img src="img/compartir6.jpg" alt="Set Anclas" class="producto-img">
+      <h3 class="producto-nombre">SET ANCLAS</h3>
+      <p class="producto-desc">Ancla pequeña. Porque vos sos mi lugar seguro y yo el tuyo.</p>
+      <p class="producto-precio">$8.000</p>
+      <div class="btn-group">
+        <button class="btn-carrito" onclick="agregarAlCarrito('Set Anclas', 8000)">AGREGAR AL CARRITO</button>
+        <button class="btn-comprar" onclick="comprarAhora('Set Anclas', 8000)">COMPRAR AHORA</button>
+      </div>
+    </div>
+
+    <div class="producto-card" data-cat="compartir" data-sub="pareja">
+      <img src="img/compartir7.jpg" alt="Set Llave y Candado" class="producto-img">
+      <h3 class="producto-nombre">SET LLAVE Y CANDADO</h3>
+      <p class="producto-desc">Él tiene la llave, ella el candado. Juntos abren todos los secretos.</p>
+      <p class="producto-precio">$8.000</p>
+      <div class="btn-group">
+        <button class="btn-carrito" onclick="agregarAlCarrito('Set Llave y Candado', 8000)">AGREGAR AL CARRITO</button>
+        <button class="btn-comprar" onclick="comprarAhora('Set Llave y Candado', 8000)">COMPRAR AHORA</button>
+      </div>
+    </div>
+
+    <div class="producto-card" data-cat="compartir" data-sub="pareja">
+      <img src="img/compartir8.jpg" alt="Set Estrellas" class="producto-img">
+      <h3 class="producto-nombre">SET ESTRELLAS</h3>
+      <p class="producto-desc">Constelación de su fecha. Brillan en la oscuridad. Para guiarse siempre.</p>
+      <p class="producto-precio">$8.000</p>
+      <div class="btn-group">
+        <button class="btn-carrito" onclick="agregarAlCarrito('Set Estrellas', 8000)">AGREGAR AL CARRITO</button>
+        <button class="btn-comprar" onclick="comprarAhora('Set Estrellas', 8000)">COMPRAR AHORA</button>
+      </div>
+    </div>
+
+    <div class="producto-card" data-cat="compartir" data-sub="pareja">
+      <img src="img/compartir9.jpg" alt="Set Promesa" class="producto-img">
+      <h3 class="producto-nombre">SET PROMESA</h3>
+      <p class="producto-desc">Anillo de promesa + pulsera. "Te elijo hoy y siempre". Simple y elegante.</p>
+      <p class="producto-precio">$8.000</p>
+      <div class="btn-group">
+        <button class="btn-carrito" onclick="agregarAlCarrito('Set Promesa', 8000)">AGREGAR AL CARRITO</button>
+        <button class="btn-comprar" onclick="comprarAhora('Set Promesa', 8000)">COMPRAR AHORA</button>
       </div>
     </div>
 
     <!-- === PARA COMPARTIR - AMIGOS === -->
     <div class="producto-card" data-cat="compartir" data-sub="amigos">
-      <div class="carrusel" id="sa1">
-        <div class="carrusel-imagenes">
-          <img src="img/set1-1.jpg" alt="Amigos">
-          <img src="img/set1-2.jpg" alt="Amigos">
-        </div>
-        <button class="carrusel-btn prev" onclick="moverCarrusel('sa1', -1)">‹</button>
-        <button class="carrusel-btn next" onclick="moverCarrusel('sa1', 1)">›</button>
-      </div>
+      <img src="img/amigos1.jpg" alt="Set Tribu" class="producto-img">
       <h3 class="producto-nombre">SET TRIBU X3</h3>
-      <p class="producto-desc">3 pulseras. Para vos y tus 2 mejores amigas.</p>
-      <p class="producto-precio">$20.000</p>
+      <p class="producto-desc">3 pulseras en degradé azul. Para vos y tus 2 mejores amigas. Nunca solas.</p>
+      <p class="producto-precio">$8.000</p>
       <div class="btn-group">
-        <button class="btn-carrito" onclick="agregarAlCarrito('Set Tribu x3', 20000)">AGREGAR AL CARRITO</button>
-        <button class="btn-comprar" onclick="comprarAhora('Set Tribu x3', 20000)">COMPRAR AHORA</button>
-      </div>
-    </div>
-
-    <div class="producto-card" data-cat="compartir" data-sub="amigos">
-      <div class="carrusel" id="sa2">
-        <div class="carrusel-imagenes">
-          <img src="img/set2-1.jpg" alt="Amigos">
-          <img src="img/set2-2.jpg" alt="Amigos">
-        </div>
-        <button class="carrusel-btn prev" onclick="moverCarrusel('sa2', -1)">‹</button>
-        <button class="carrusel-btn next" onclick="moverCarrusel('sa2', 1)">›</button>
-      </div>
-      <h3 class="producto-nombre">SET CONEXIÓN X4</h3>
-      <p class="producto-desc">4 pulseras en degradé azul. Para todo el grupo.</p>
-      <p class="producto-precio">$25.000</p>
-      <div class="btn-group">
-        <button class="btn-carrito" onclick="agregarAlCarrito('Set Conexión x4', 25000)">AGREGAR AL CARRITO</button>
-        <button class="btn-comprar" onclick="comprarAhora('Set Conexión x4', 25000)">COMPRAR AHORA</button>
+        <button class="btn-carrito" onclick="agregarAlCarrito('Set Tribu x3', 8000)">AGREGAR AL CARRITO</button>
+        <button class="btn-comprar" onclick="comprarAhora('Set Tribu x3', 8000)">COMPRAR AHORA</button>
       </div>
     </div>
 
     <!-- === PARA COMPARTIR - FAMILIA === -->
     <div class="producto-card" data-cat="compartir" data-sub="familia">
-      <div class="carrusel" id="sf1">
-        <div class="carrusel-imagenes">
-          <img src="img/familia1-1.jpg" alt="Familia">
-          <img src="img/familia1-2.jpg" alt="Familia">
-        </div>
-        <button class="carrusel-btn prev" onclick="moverCarrusel('sf1', -1)">‹</button>
-        <button class="carrusel-btn next" onclick="moverCarrusel('sf1', 1)">›</button>
-      </div>
+      <img src="img/familia1.jpg" alt="Set Familia" class="producto-img">
       <h3 class="producto-nombre">SET FAMILIA</h3>
-      <p class="producto-desc">Pulseras para mamá, papá e hijos. Todos conectados.</p>
-      <p class="producto-precio">$28.000</p>
+      <p class="producto-desc">Pulseras para mamá, papá e hijos. Árbol genealógico tejido. Todos conectados.</p>
+      <p class="producto-precio">$8.000</p>
       <div class="btn-group">
-        <button class="btn-carrito" onclick="agregarAlCarrito('Set Familia', 28000)">AGREGAR AL CARRITO</button>
-        <button class="btn-comprar" onclick="comprarAhora('Set Familia', 28000)">COMPRAR AHORA</button>
+        <button class="btn-carrito" onclick="agregarAlCarrito('Set Familia', 8000)">AGREGAR AL CARRITO</button>
+        <button class="btn-comprar" onclick="comprarAhora('Set Familia', 8000)">COMPRAR AHORA</button>
       </div>
     </div>
 
@@ -433,7 +407,6 @@
 
 <script>
   let carrito = [];
-  let posicionesCarrusel = {};
   let categoriaActual = 'todos';
   let subCategoriaActual = 'pareja';
 
@@ -476,16 +449,6 @@
         prod.classList.add('oculto');
       }
     });
-  }
-
-  function moverCarrusel(id, direccion) {
-    if(!posicionesCarrusel[id]) posicionesCarrusel[id] = 0;
-    const carrusel = document.getElementById(id).querySelector('.carrusel-imagenes');
-    const total = carrusel.children.length;
-    posicionesCarrusel[id] += direccion;
-    if(posicionesCarrusel[id] < 0) posicionesCarrusel[id] = total - 1;
-    if(posicionesCarrusel[id] >= total) posicionesCarrusel[id] = 0;
-    carrusel.style.transform = `translateX(-${posicionesCarrusel[id] * 100}%)`;
   }
 
   function agregarAlCarrito(nombre, precio) {
