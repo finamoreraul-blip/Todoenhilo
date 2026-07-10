@@ -29,295 +29,106 @@
       color: white;
       position: relative;
     }
-   .header::after {
-      content: "☁️ ☁️ ☁️";
-      position: absolute;
-      bottom: 15px;
-      left: 0;
-      right: 0;
-      font-size: 1.5rem;
-      opacity: 0.3;
-    }
-
-   .logo-banner {
-      width: 100%;
-      max-height: 420px;
-      object-fit: cover;
-      display: block;
-    }
-
+   .header::after { content: "☁️ ☁️ ☁️"; position: absolute; bottom: 15px; left: 0; right: 0; font-size: 1.5rem; opacity: 0.3; }
+   .logo-banner { width: 100%; max-height: 420px; object-fit: cover; display: block; }
    .header-content { padding: 40px 20px; }
-
-   .logo {
-      font-size: 3.8rem;
-      font-weight: 900;
-      letter-spacing: 6px;
-      margin: 0;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-    }
-
-   .slogan {
-      font-size: 1.3rem;
-      margin-top: 15px;
-      font-weight: 300;
-      letter-spacing: 2px;
-    }
+   .logo { font-size: 3.8rem; font-weight: 900; letter-spacing: 6px; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+   .slogan { font-size: 1.3rem; margin-top: 15px; font-weight: 300; letter-spacing: 2px; }
 
    .carrito-icon {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: white;
-      color: var(--azul-osc);
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 26px;
-      cursor: pointer;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-      z-index: 1000;
-      transition: 0.3s;
+      position: fixed; top: 20px; right: 20px; background: white; color: var(--azul-osc);
+      width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 26px; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 1000; transition: 0.3s;
     }
    .carrito-icon:hover { transform: scale(1.1); }
    .carrito-contador {
-      position: absolute;
-      top: -5px;
-      right: -5px;
-      background: var(--azul-osc);
-      color: white;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      font-size: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
+      position: absolute; top: -5px; right: -5px; background: var(--azul-osc); color: white;
+      width: 24px; height: 24px; border-radius: 50%; font-size: 12px; display: flex; align-items: center; justify-content: center; font-weight: bold;
     }
 
    .section { padding: 70px 20px; max-width: 1200px; margin: auto; }
-
-    h2 {
-      text-align: center;
-      font-size: 2.8rem;
-      color: var(--azul-osc);
-      margin-bottom: 20px;
-      font-weight: 700;
-    }
-    h2::before, h2::after { content: "✨"; margin: 0 15px; }
+   h2 { text-align: center; font-size: 2.8rem; color: var(--azul-osc); margin-bottom: 20px; font-weight: 700; }
+   h2::before, h2::after { content: "✨"; margin: 0 15px; }
 
    .categorias {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-bottom: 50px;
-      flex-wrap: wrap;
+      display: flex; justify-content: center; gap: 15px; margin-bottom: 30px; flex-wrap: wrap;
    }
    .btn-categoria {
-      background: var(--azul-claro);
-      color: var(--azul-osc);
-      padding: 12px 25px;
-      border-radius: 50px;
-      border: 2px solid var(--azul);
-      font-weight: 600;
-      cursor: pointer;
-      transition: 0.3s;
-      font-size: 1rem;
+      background: var(--azul-claro); color: var(--azul-osc); padding: 12px 25px; border-radius: 50px;
+      border: 2px solid var(--azul); font-weight: 600; cursor: pointer; transition: 0.3s; font-size: 1rem;
    }
-   .btn-categoria:hover,.btn-categoria.activo {
-      background: var(--azul);
-      color: white;
+   .btn-categoria:hover,.btn-categoria.activo { background: var(--azul); color: white; }
+
+   .subcategorias {
+      display: none; justify-content: center; gap: 10px; margin-bottom: 50px; flex-wrap: wrap;
    }
+   .subcategorias.mostrar { display: flex; }
+   .btn-sub {
+      background: white; color: var(--azul); padding: 10px 20px; border-radius: 40px;
+      border: 1px solid var(--azul); font-weight: 500; cursor: pointer; transition: 0.3s; font-size: 0.9rem;
+   }
+   .btn-sub:hover,.btn-sub.activo { background: var(--azul-claro); }
 
    .info-envios {
-      background: var(--azul-claro);
-      border-radius: 15px;
-      padding: 20px;
-      text-align: center;
-      margin-bottom: 60px;
-      border: 2px solid var(--azul);
-      color: var(--azul-osc);
-      font-size: 1.1rem;
-      font-weight: 600;
+      background: var(--azul-claro); border-radius: 15px; padding: 20px; text-align: center; margin-bottom: 60px;
+      border: 2px solid var(--azul); color: var(--azul-osc); font-size: 1.1rem; font-weight: 600;
     }
 
    .grid-productos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 40px;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px;
     }
 
    .producto-card {
-      background: var(--blanco);
-      border-radius: 20px;
-      padding: 0;
-      box-shadow: 0 10px 30px rgba(74,144,226,0.15);
-      border: 2px solid #E0EEFB;
-      text-align: center;
-      transition: 0.4s;
-      overflow: hidden;
-      display: block;
+      background: var(--blanco); border-radius: 20px; padding: 0; box-shadow: 0 10px 30px rgba(74,144,226,0.15);
+      border: 2px solid #E0EEFB; text-align: center; transition: 0.4s; overflow: hidden; display: block;
     }
-   .producto-card:hover {
-      transform: translateY(-15px);
-      box-shadow: 0 15px 40px rgba(74,144,226,0.25);
-      border-color: var(--azul);
-    }
+   .producto-card:hover { transform: translateY(-15px); box-shadow: 0 15px 40px rgba(74,144,226,0.25); border-color: var(--azul); }
    .producto-card.oculto { display: none; }
 
-   .producto-nombre {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--azul-osc);
-      margin: 20px 20px 10px 20px;
-      letter-spacing: 1px;
-    }
+   .producto-nombre { font-size: 1.4rem; font-weight: 700; color: var(--azul-osc); margin: 20px 20px 10px 20px; letter-spacing: 1px; }
    .producto-nombre::before { content: "💙 "; }
+   .producto-desc { font-size: 1rem; color: var(--gris); margin: 0 20px 15px 20px; min-height: 50px; line-height: 1.6; }
+   .producto-precio { font-size: 2rem; color: var(--azul); font-weight: 700; margin: 15px 0; }
 
-   .producto-desc {
-      font-size: 1rem;
-      color: var(--gris);
-      margin: 0 20px 15px 20px;
-      min-height: 50px;
-      line-height: 1.6;
-    }
-
-   .producto-precio {
-      font-size: 2rem;
-      color: var(--azul);
-      font-weight: 700;
-      margin: 15px 0;
-    }
-
-   .carrusel {
-      position: relative;
-      width: 100%;
-      height: 300px;
-      overflow: hidden;
-    }
-
-   .carrusel-imagenes {
-      display: flex;
-      transition: transform 0.5s ease;
-      height: 100%;
-    }
-
-   .carrusel-imagenes img {
-      width: 100%;
-      flex-shrink: 0;
-      height: 100%;
-      object-fit: cover;
-    }
-
+   .carrusel { position: relative; width: 100%; height: 300px; overflow: hidden; }
+   .carrusel-imagenes { display: flex; transition: transform 0.5s ease; height: 100%; }
+   .carrusel-imagenes img { width: 100%; flex-shrink: 0; height: 100%; object-fit: cover; }
    .carrusel-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(255,255,255,0.9);
-      border: none;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      cursor: pointer;
-      font-size: 20px;
-      color: var(--azul-osc);
-      font-weight: bold;
+      position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.9);
+      border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 20px; color: var(--azul-osc); font-weight: bold;
     }
    .prev { left: 10px; }
    .next { right: 10px; }
 
-   .btn-group {
-      display: flex;
-      gap: 12px;
-      padding: 20px;
-      justify-content: center;
-   }
-
+   .btn-group { display: flex; gap: 12px; padding: 20px; justify-content: center; }
    .btn-carrito {
-      background: var(--blanco);
-      color: var(--azul);
-      padding: 14px 24px;
-      border-radius: 50px;
-      border: 2px solid var(--azul);
-      font-weight: 700;
-      font-size: 0.95rem;
-      cursor: pointer;
-      transition: 0.3s;
-      letter-spacing: 0.5px;
-      flex: 1;
+      background: var(--blanco); color: var(--azul); padding: 14px 24px; border-radius: 50px; border: 2px solid var(--azul);
+      font-weight: 700; font-size: 0.95rem; cursor: pointer; transition: 0.3s; letter-spacing: 0.5px; flex: 1;
     }
    .btn-carrito:hover { background: var(--azul-claro); transform: scale(1.05); }
-
    .btn-comprar {
-      background: var(--azul);
-      color: white;
-      padding: 14px 24px;
-      border-radius: 50px;
-      border: none;
-      font-weight: 700;
-      font-size: 0.95rem;
-      cursor: pointer;
-      transition: 0.3s;
-      letter-spacing: 0.5px;
-      flex: 1;
+      background: var(--azul); color: white; padding: 14px 24px; border-radius: 50px; border: none;
+      font-weight: 700; font-size: 0.95rem; cursor: pointer; transition: 0.3s; letter-spacing: 0.5px; flex: 1;
       box-shadow: 0 4px 15px rgba(74,144,226,0.3);
     }
    .btn-comprar:hover { background: var(--azul-osc); transform: scale(1.05); }
 
    .btn-wpp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: var(--azul);
-      color: white;
-      width: 65px;
-      height: 65px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 30px;
-      text-decoration: none;
-      box-shadow: 0 4px 15px rgba(74,144,226,0.4);
-      z-index: 999;
-      transition: 0.3s;
+      position: fixed; bottom: 20px; right: 20px; background: var(--azul); color: white;
+      width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 30px; text-decoration: none; box-shadow: 0 4px 15px rgba(74,144,226,0.4); z-index: 999; transition: 0.3s;
     }
    .btn-wpp:hover { background: var(--azul-osc); transform: scale(1.1); }
 
    .carrito-popup {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.6);
-      z-index: 2000;
-      align-items: center;
-      justify-content: center;
+      display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6); z-index: 2000; align-items: center; justify-content: center;
     }
    .carrito-contenido {
-      background: white;
-      padding: 35px;
-      border-radius: 25px;
-      max-width: 500px;
-      width: 90%;
-      border: 3px solid var(--azul);
+      background: white; padding: 35px; border-radius: 25px; max-width: 500px; width: 90%; border: 3px solid var(--azul);
     }
-   .carrito-item {
-      display: flex;
-      justify-content: space-between;
-      padding: 15px 0;
-      border-bottom: 1px solid #eee;
-      font-size: 1.1rem;
-    }
-   .cerrar-carrito {
-      float: right;
-      font-size: 32px;
-      cursor: pointer;
-      color: var(--azul);
-   }
+   .carrito-item { display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid #eee; font-size: 1.1rem; }
+   .cerrar-carrito { float: right; font-size: 32px; cursor: pointer; color: var(--azul); }
 
     @media (max-width: 768px) {
      .logo { font-size: 2.6rem; }
@@ -353,6 +164,13 @@
     <button class="btn-categoria" onclick="filtrar('pulseras')">Pulseras</button>
     <button class="btn-categoria" onclick="filtrar('collares')">Collares</button>
     <button class="btn-categoria" onclick="filtrar('compartir')">Para Compartir</button>
+  </div>
+
+  <!-- SUBFILTRO COMPARTIR -->
+  <div class="subcategorias" id="subFiltro">
+    <button class="btn-sub activo" onclick="filtrarSub('pareja')">Con Pareja</button>
+    <button class="btn-sub" onclick="filtrarSub('amigos')">Con Amigos</button>
+    <button class="btn-sub" onclick="filtrarSub('familia')">Con Familia</button>
   </div>
 
   <div class="grid-productos">
@@ -467,33 +285,90 @@
       </div>
     </div>
 
-    <!-- === PARA COMPARTIR === -->
-    <div class="producto-card" data-cat="compartir">
-      <div class="carrusel" id="s1">
+    <!-- === PARA COMPARTIR - PAREJA === -->
+    <div class="producto-card" data-cat="compartir" data-sub="pareja">
+      <div class="carrusel" id="sp1">
         <div class="carrusel-imagenes">
-          <img src="img/set1-1.jpg" alt="Set x2">
-          <img src="img/set1-2.jpg" alt="Set x2">
+          <img src="img/compartir0.jpg" alt="Pareja 0">
+          <img src="img/compartir1.jpg" alt="Pareja 1">
+          <img src="img/compartir2.jpg" alt="Pareja 2">
         </div>
-        <button class="carrusel-btn prev" onclick="moverCarrusel('s1', -1)">‹</button>
-        <button class="carrusel-btn next" onclick="moverCarrusel('s1', 1)">›</button>
+        <button class="carrusel-btn prev" onclick="moverCarrusel('sp1', -1)">‹</button>
+        <button class="carrusel-btn next" onclick="moverCarrusel('sp1', 1)">›</button>
       </div>
-      <h3 class="producto-nombre">SET CONEXIÓN X2</h3>
-      <p class="producto-desc">Pulseras para compartir. 2 piezas en tonos celestes.</p>
-      <p class="producto-precio">$14.000</p>
+      <h3 class="producto-nombre">SET CORAZONES</h3>
+      <p class="producto-desc">Pulsera + collar a juego. Para vos y tu persona.</p>
+      <p class="producto-precio">$22.000</p>
       <div class="btn-group">
-        <button class="btn-carrito" onclick="agregarAlCarrito('Set Conexión x2', 14000)">AGREGAR AL CARRITO</button>
-        <button class="btn-comprar" onclick="comprarAhora('Set Conexión x2', 14000)">COMPRAR AHORA</button>
+        <button class="btn-carrito" onclick="agregarAlCarrito('Set Corazones', 22000)">AGREGAR AL CARRITO</button>
+        <button class="btn-comprar" onclick="comprarAhora('Set Corazones', 22000)">COMPRAR AHORA</button>
       </div>
     </div>
 
-    <div class="producto-card" data-cat="compartir">
-      <div class="carrusel" id="s2">
+    <div class="producto-card" data-cat="compartir" data-sub="pareja">
+      <div class="carrusel" id="sp2">
         <div class="carrusel-imagenes">
-          <img src="img/set2-1.jpg" alt="Set x3">
-          <img src="img/set2-2.jpg" alt="Set x3">
+          <img src="img/compartir3.jpg" alt="Pareja 3">
+          <img src="img/compartir4.jpg" alt="Pareja 4">
         </div>
-        <button class="carrusel-btn prev" onclick="moverCarrusel('s2', -1)">‹</button>
-        <button class="carrusel-btn next" onclick="moverCarrusel('s2', 1)">›</button>
+        <button class="carrusel-btn prev" onclick="moverCarrusel('sp2', -1)">‹</button>
+        <button class="carrusel-btn next" onclick="moverCarrusel('sp2', 1)">›</button>
+      </div>
+      <h3 class="producto-nombre">SET INFINITO</h3>
+      <p class="producto-desc">Símbolo infinito en hilo celeste. Conexión eterna.</p>
+      <p class="producto-precio">$18.000</p>
+      <div class="btn-group">
+        <button class="btn-carrito" onclick="agregarAlCarrito('Set Infinito', 18000)">AGREGAR AL CARRITO</button>
+        <button class="btn-comprar" onclick="comprarAhora('Set Infinito', 18000)">COMPRAR AHORA</button>
+      </div>
+    </div>
+
+    <div class="producto-card" data-cat="compartir" data-sub="pareja">
+      <div class="carrusel" id="sp3">
+        <div class="carrusel-imagenes">
+          <img src="img/compartir5.jpg" alt="Pareja 5">
+          <img src="img/compartir6.jpg" alt="Pareja 6">
+        </div>
+        <button class="carrusel-btn prev" onclick="moverCarrusel('sp3', -1)">‹</button>
+        <button class="carrusel-btn next" onclick="moverCarrusel('sp3', 1)">›</button>
+      </div>
+      <h3 class="producto-nombre">SET SOL Y LUNA</h3>
+      <p class="producto-desc">Él es sol, ella es luna. Diseños complementarios.</p>
+      <p class="producto-precio">$20.000</p>
+      <div class="btn-group">
+        <button class="btn-carrito" onclick="agregarAlCarrito('Set Sol y Luna', 20000)">AGREGAR AL CARRITO</button>
+        <button class="btn-comprar" onclick="comprarAhora('Set Sol y Luna', 20000)">COMPRAR AHORA</button>
+      </div>
+    </div>
+
+    <div class="producto-card" data-cat="compartir" data-sub="pareja">
+      <div class="carrusel" id="sp4">
+        <div class="carrusel-imagenes">
+          <img src="img/compartir7.jpg" alt="Pareja 7">
+          <img src="img/compartir8.jpg" alt="Pareja 8">
+          <img src="img/compartir9.jpg" alt="Pareja 9">
+        </div>
+        <button class="carrusel-btn prev" onclick="moverCarrusel('sp4', -1)">‹</button>
+        <button class="carrusel-btn next" onclick="moverCarrusel('sp4', 1)">›</button>
+      </div>
+      <h3 class="producto-nombre">SET ALMAS GEMELAS</h3>
+      <p class="producto-desc">Dos piezas que encajan. Para almas que se encontraron.</p>
+      <p class="producto-precio">$24.000</p>
+      <div class="btn-group">
+        <button class="btn-carrito" onclick="agregarAlCarrito('Set Almas Gemelas', 24000)">AGREGAR AL CARRITO</button>
+        <button class="btn-comprar" onclick="comprarAhora('Set Almas Gemelas', 24000)">COMPRAR AHORA</button>
+      </div>
+    </div>
+
+    <!-- === PARA COMPARTIR - AMIGOS === -->
+    <div class="producto-card" data-cat="compartir" data-sub="amigos">
+      <div class="carrusel" id="sa1">
+        <div class="carrusel-imagenes">
+          <img src="img/set1-1.jpg" alt="Amigos">
+          <img src="img/set1-2.jpg" alt="Amigos">
+        </div>
+        <button class="carrusel-btn prev" onclick="moverCarrusel('sa1', -1)">‹</button>
+        <button class="carrusel-btn next" onclick="moverCarrusel('sa1', 1)">›</button>
       </div>
       <h3 class="producto-nombre">SET TRIBU X3</h3>
       <p class="producto-desc">3 pulseras. Para vos y tus 2 mejores amigas.</p>
@@ -504,21 +379,40 @@
       </div>
     </div>
 
-    <div class="producto-card" data-cat="compartir">
-      <div class="carrusel" id="s3">
+    <div class="producto-card" data-cat="compartir" data-sub="amigos">
+      <div class="carrusel" id="sa2">
         <div class="carrusel-imagenes">
-          <img src="img/set3-1.jpg" alt="Set Pareja">
-          <img src="img/set3-2.jpg" alt="Set Pareja">
+          <img src="img/set2-1.jpg" alt="Amigos">
+          <img src="img/set2-2.jpg" alt="Amigos">
         </div>
-        <button class="carrusel-btn prev" onclick="moverCarrusel('s3', -1)">‹</button>
-        <button class="carrusel-btn next" onclick="moverCarrusel('s3', 1)">›</button>
+        <button class="carrusel-btn prev" onclick="moverCarrusel('sa2', -1)">‹</button>
+        <button class="carrusel-btn next" onclick="moverCarrusel('sa2', 1)">›</button>
       </div>
-      <h3 class="producto-nombre">SET AMOR</h3>
-      <p class="producto-desc">Pulsera + collar a juego. Para regalar en pareja.</p>
-      <p class="producto-precio">$22.000</p>
+      <h3 class="producto-nombre">SET CONEXIÓN X4</h3>
+      <p class="producto-desc">4 pulseras en degradé azul. Para todo el grupo.</p>
+      <p class="producto-precio">$25.000</p>
       <div class="btn-group">
-        <button class="btn-carrito" onclick="agregarAlCarrito('Set Amor', 22000)">AGREGAR AL CARRITO</button>
-        <button class="btn-comprar" onclick="comprarAhora('Set Amor', 22000)">COMPRAR AHORA</button>
+        <button class="btn-carrito" onclick="agregarAlCarrito('Set Conexión x4', 25000)">AGREGAR AL CARRITO</button>
+        <button class="btn-comprar" onclick="comprarAhora('Set Conexión x4', 25000)">COMPRAR AHORA</button>
+      </div>
+    </div>
+
+    <!-- === PARA COMPARTIR - FAMILIA === -->
+    <div class="producto-card" data-cat="compartir" data-sub="familia">
+      <div class="carrusel" id="sf1">
+        <div class="carrusel-imagenes">
+          <img src="img/familia1-1.jpg" alt="Familia">
+          <img src="img/familia1-2.jpg" alt="Familia">
+        </div>
+        <button class="carrusel-btn prev" onclick="moverCarrusel('sf1', -1)">‹</button>
+        <button class="carrusel-btn next" onclick="moverCarrusel('sf1', 1)">›</button>
+      </div>
+      <h3 class="producto-nombre">SET FAMILIA</h3>
+      <p class="producto-desc">Pulseras para mamá, papá e hijos. Todos conectados.</p>
+      <p class="producto-precio">$28.000</p>
+      <div class="btn-group">
+        <button class="btn-carrito" onclick="agregarAlCarrito('Set Familia', 28000)">AGREGAR AL CARRITO</button>
+        <button class="btn-comprar" onclick="comprarAhora('Set Familia', 28000)">COMPRAR AHORA</button>
       </div>
     </div>
 
@@ -540,18 +434,45 @@
 <script>
   let carrito = [];
   let posicionesCarrusel = {};
+  let categoriaActual = 'todos';
+  let subCategoriaActual = 'pareja';
 
   function filtrar(categoria) {
+    categoriaActual = categoria;
     const productos = document.querySelectorAll('.producto-card');
     const botones = document.querySelectorAll('.btn-categoria');
+    const subFiltro = document.getElementById('subFiltro');
+    
+    botones.forEach(btn => btn.classList.remove('activo'));
+    event.target.classList.add('activo');
+
+    if(categoria === 'compartir') {
+      subFiltro.classList.add('mostrar');
+      filtrarSub(subCategoriaActual);
+    } else {
+      subFiltro.classList.remove('mostrar');
+      productos.forEach(prod => {
+        if(categoria === 'todos' || prod.dataset.cat === categoria) {
+          prod.classList.remove('oculto');
+        } else {
+          prod.classList.add('oculto');
+        }
+      });
+    }
+  }
+
+  function filtrarSub(sub) {
+    subCategoriaActual = sub;
+    const productos = document.querySelectorAll('.producto-card');
+    const botones = document.querySelectorAll('.btn-sub');
     
     botones.forEach(btn => btn.classList.remove('activo'));
     event.target.classList.add('activo');
 
     productos.forEach(prod => {
-      if(categoria === 'todos' || prod.dataset.cat === categoria) {
+      if(prod.dataset.cat === 'compartir' && prod.dataset.sub === sub) {
         prod.classList.remove('oculto');
-      } else {
+      } else if(prod.dataset.cat === 'compartir') {
         prod.classList.add('oculto');
       }
     });
